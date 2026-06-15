@@ -5361,47 +5361,47 @@
 | # | Answer | Explanation |
 |---|---|---|
 | J1 | **IaaS** | VMs = virtualized compute. You manage OS and apps. IaaS = renting infrastructure. (PT4) |
-| J2 | **AzCopy** | VMs = virtualized compute. You manage OS and apps. IaaS = renting infrastructure. (PT4) |
+| J2 | **AzCopy** |  (PT4) |
 | J3 | **Region Pair** |  (PT4) |
 | J4 | **Yes** | Location = where metadata is stored. Resources inside can be in any region. (PT4) |
 | J5 | **Data and Identities** | Regardless of IaaS/PaaS/SaaS, customer always owns data and identities. (PT4) |
-| J6 | **Yes** | Budgets = set limits + alert notifications. NOT: auto-increase, suspend usage, or generate invoices. (PT4) |
+| J6 | **Yes** |  (PT4) |
 | J7 | **Azure Container Registry** |  (PT4) |
 | J8 | **IaaS** | IaaS = customer manages OS, apps, data, network config. SaaS = least. PaaS = middle. (PT4) |
-| J9 | **Dedicated intrusion detection system (IDS)** |  (PT4) |
+| J9 | **Dedicated intrusion detection system (IDS)** | Defense-in-depth = multiple layers. IDS monitors network for suspicious activity. (PT4) |
 | J10 | **Azure Service Health** |  (PT4) |
 | J11 | **Include multiple values for a single tag name** |  (PT4) |
-| J12 | **Azure Arc** | B2B + B2C capabilities for managing outside users (customers, partners). (PT4) |
+| J12 | **Azure Arc** |  (PT4) |
 | J13 | **Azure Service Health** |  (PT4) |
-| J14 | **Budgets** |  (PT4) |
+| J14 | **Budgets** | Budgets = set limits + alert notifications. NOT: auto-increase, suspend usage, or generate invoices. (PT4) |
 | J15 | **Private cloud for financial institution** | Hospital needing full control over patient data → private/hybrid, not public. (PT4) |
 | J16 | **No (True)** | Must apply individually or use Azure Policy for auto-tagging. (PT4) |
 | J17 | **Fault Tolerance** | Redundancy, failover, backups = keep running when components fail. (PT4) |
-| J18 | **External Identities** |  (PT4) |
-| J19 | **21Vianet** | Azure DNS hosts domains, doesn't sell them. Buy from App Service domains or third-party registrar. (PT4) |
+| J18 | **External Identities** | B2B + B2C capabilities for managing outside users (customers, partners). (PT4) |
+| J19 | **21Vianet** |  (PT4) |
 | J20 | **No** | On-prem = direct physical control. Cloud = trust the provider for physical security. (PT4) |
-| J21 | **Pay only for resources actually consumed** | Question doesn't specify cross-zone/cross-DC config. VMSS alone doesn't guarantee DC fault tolerance without explicit AZ configuration. (PT4) |
+| J21 | **Pay only for resources actually consumed** |  (PT4) |
 | J22 | **Azure ExpressRoute** |  (PT4) |
 | J23 | **Pay-as-you-go** |  (PT4) |
 | J24 | **AKS + Azure Functions** |  (PT4) |
-| J25 | **Prevent accidental deletion or modification** | PowerAutomate ≠ PowerShell. PowerAutomate isn't an Azure deployment tool. (PT4) |
+| J25 | **Prevent accidental deletion or modification** |  (PT4) |
 | J26 | **Azure Container Instances** |  (PT4) |
 | J27 | **Azure App Service, Azure SQL, Azure Storage** |  (PT4) |
-| J28 | **No** |  (PT4) |
+| J28 | **No** | PowerAutomate ≠ PowerShell. PowerAutomate isn't an Azure deployment tool. (PT4) |
 | J29 | **Azure DNS** |  (PT4) |
 | J30 | **Yes** |  (PT4) |
-| J31 | **No** |  (PT4) |
-| J32 | **No** |  (PT4) |
-| J33 | **Securing VMs and access to them** | ExpressRoute = dedicated private connection. NOT public internet. (PT4) |
-| J34 | **Clearly defines roles of CSP and customer in security** | Defense-in-depth = multiple layers. IDS monitors network for suspicious activity. (PT4) |
-| J35 | **Purview** | Service Health notifies and advises. Cannot prevent service failures. (PT4) |
+| J31 | **No** | Azure DNS hosts domains, doesn't sell them. Buy from App Service domains or third-party registrar. (PT4) |
+| J32 | **No** | Question doesn't specify cross-zone/cross-DC config. VMSS alone doesn't guarantee DC fault tolerance without explicit AZ configuration. (PT4) |
+| J33 | **Securing VMs and access to them** |  (PT4) |
+| J34 | **Clearly defines roles of CSP and customer in security** |  (PT4) |
+| J35 | **Purview** |  (PT4) |
 | J36 | **PaaS** |  (PT4) |
 | J37 | **Azure Storage Explorer** |  (PT4) |
 | J38 | **PaaS** |  (PT4) |
 | J39 | **Virtual Network Peering** |  (PT4) |
 | J40 | **PaaS, SaaS** |  (PT4) |
 | J41 | **Management Groups with Resource Groups by business unit** |  (PT4) |
-| J42 | **No** |  (PT4) |
+| J42 | **No** | ExpressRoute = dedicated private connection. NOT public internet. (PT4) |
 | J43 | **Authentication** |  (PT4) |
 | J44 | **PowerShell; Bash** |  (PT4) |
 | J45 | **Ensure secure configurations of workloads and resources** |  (PT4) |
@@ -5412,7 +5412,7 @@
 | J50 | **Azure Functions** |  (PT4) |
 | J51 | **Log Analytics** |  (PT4) |
 | J52 | **No** |  (PT4) |
-| J53 | **No** |  (PT4) |
+| J53 | **No** | Service Health notifies and advises. Cannot prevent service failures. (PT4) |
 | J54 | **No** | Resources can connect to resources in other RGs. (PT4) |
 | J55 | **Azure Files** |  (PT4) |
 | J56 | **Yes** |  (PT4) |
