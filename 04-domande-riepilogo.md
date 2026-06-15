@@ -207,7 +207,7 @@
 | B8 | **b** | Archive-tier Blobs must be rehydrated to Hot or Cool tier before they can be accessed. |
 | B9 | **d** | GZRS = ZRS in primary region (3 zones) + LRS in secondary region (3 copies). Most durable option. |
 | B10 | **c** | Azure Data Box (80 TB capacity) is designed for large-scale offline data migration. AzCopy and Storage Explorer are for smaller transfers. |
-| B11 | **c** | Azure AD Connect synchronizes on-premises Windows AD with Azure AD. |
+| B11 | **c** | Azure AD Connect (now **Microsoft Entra Connect**) synchronizes on-premises Windows AD with Azure AD (now **Microsoft Entra ID**). ⚠️ All "Azure AD" names in this question use deprecated terminology — the exam may use either form. |
 | B12 | **b** | Contributor can create/manage resources but cannot assign roles to others. Owner has full access including delegation. |
 | B13 | **c** | Zero Trust assumes all access is potentially malicious and enforces Conditional Access, MFA, and least-privilege. |
 | B14 | **b** | VPN Gateway secures connections using IPSec (Internet Protocol Security) and IKE (Internet Key Exchange). |
@@ -216,7 +216,7 @@
 | B17 | **FALSE** | Management groups can contain both subscriptions AND other management groups. |
 | B18 | **FALSE** | VNet peering traffic travels over Microsoft's private backbone infrastructure, not the public internet. |
 | B19 | **⚠️ TRUE** | ⚠️ **Correction**: The original answer was FALSE, but this is incorrect. Microsoft docs confirm you CAN change the replication setting of an existing storage account (e.g., LRS → GRS, ZRS → GZRS). Some changes require a support request or data copy. The correct answer is **TRUE**. Note: you cannot change the account *type* (Standard → Premium), which may be the source of confusion. |
-| B20 | **FALSE** | Azure MFA is two-factor authentication (2FA): something you know + something you have. A device's built-in biometrics may add a third factor, but Azure itself doesn't require it. |
+| B20 | **FALSE** | Azure MFA requires two or more verification factors (not three). Categories: something you know (password) + something you have (phone/key) + something you are (biometric). MFA means at least 2 factors, not necessarily all 3. |
 | B21 | **TRUE** | RBAC is additive. If you have Owner on a resource group and Contributor on a resource within it, Owner takes precedence. |
 | B22 | **TRUE** | The book states a limit of 980 resource groups per subscription across all regions. |
 
@@ -313,7 +313,7 @@
 | C7 | **c** | Azure Arc extends management to servers and Kubernetes clusters running on-premises or in other cloud providers (not limited to Azure or Windows). |
 | C8 | **c** | Log Analytics uses KQL for querying aggregated monitoring data. KQL can handle massive datasets. |
 | C9 | **c** | Creating resource locks requires the Owner or User Access Administrator RBAC role (or a custom role with lock permissions). |
-| C10 | **b** | Azure Blueprints package ARM templates, policies, role assignments, and resource groups into reusable, versioned deployment definitions. |
+| C10 | **b** | Azure Blueprints package ARM templates, policies, role assignments, and resource groups into reusable, versioned deployment definitions. ⚠️ **Note**: Azure Blueprints is being retired — replaced by **Template Specs** + **Deployment Stacks**. May still appear on the exam during the transition period. |
 | C11 | **TRUE** | Inbound (ingress) traffic to Azure is free. You're charged for outbound (egress) traffic after the first 100 GB. |
 | C12 | **TRUE** | Azure Reservations offer significant discounts for committing to 1-year or 3-year resource usage upfront. |
 | C13 | **FALSE** | Blueprints are NOT a replacement for ARM templates. Most blueprints use ARM templates as artifacts. |
