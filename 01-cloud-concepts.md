@@ -19,9 +19,9 @@ In an on-premises scenario, you are responsible for **everything**: hardware, ne
 | Operating system | You | **You** | Provider | Provider |
 | Middleware / Runtime | You | **You** | Provider | Provider |
 | Application | You | **You** | **You** | Provider |
-| Data | You | **You** | **You** | Provider* |
+| Data | You | **You** | **You** | **You*** |
 
-> *In SaaS, the provider manages everything, but your data is still your responsibility in terms of governance.
+> *Data is always YOUR responsibility across all service types — you own governance, classification, and access control. The provider manages the data infrastructure, not your data itself.
 
 ### 🏗️ Cloud Models
 

@@ -184,10 +184,17 @@ PaaS              built-in LB + scaling     Kubernetes control
 
 **Scale Sets (VMSS)** — create and manage groups of identical, load-balanced VMs. Centralize configuration, auto-scale out/in based on demand or schedules. Integrate with load balancing for efficient traffic distribution.
 
-**SLA guarantees**:
-- Multi-VM with availability zones → **99.99%**
-- Multi-VM with availability set → **99.95%**
-- Single VM with premium storage → **99.9%**
+**VM SLA Guarantees — Full Ladder:**
+
+| Configuration | SLA |
+|---|---|
+| Single VM with **Standard HDD** managed disks | **95%** |
+| Single VM with **Standard SSD** managed disks | **99.5%** |
+| Single VM with **Premium SSD** or Ultra Disk | **99.9%** |
+| Multi-VM with **Availability Set** | **99.95%** |
+| Multi-VM with **Availability Zones** (2+ zones) | **99.99%** |
+
+⚠️ **Exam Tip**: Know the full SLA ladder. Moving from HDD → SSD → Premium → Availability Set → Availability Zones progressively increases the SLA guarantee. Cost also increases at each step.
 
 **Azure Virtual Desktop (AVD)** — desktop and application virtualization service. Desktops and apps stay in the cloud, not on local devices. Integrates with Microsoft Entra ID for identity/access. Supports single-session and multi-session Windows experiences. Reduces data exposure on local devices.
 - Architecture: Users (laptop/tablet/web) → Entra ID (access policies) → Host pool (session hosts with cloud desktops and apps).
@@ -320,6 +327,7 @@ VMs ──────────────→ Containers ──────�
 - Serverless trio: Functions (event-driven code), Logic Apps (workflow automation), Event Grid (pub/sub events).
 - AI services (prebuilt APIs) vs Azure ML (custom models) vs IoT (connected devices). Agentic AI is a pattern, not a service.
 - Fault domains protect from rack failures; update domains protect from reboot downtime. Availability sets are free.
+- **VM SLA ladder**: Standard HDD 95% → Standard SSD 99.5% → Premium SSD 99.9% → Availability Set 99.95% → Availability Zones 99.99%.
 - VNet peering uses Microsoft's backbone; **requires non-overlapping IP ranges**; VPN Gateway encrypts traffic with IPSec. (Duffy)
 - Private Endpoint = specific resource, private IP via **Azure Private Link**, no public internet. Service Endpoint = all PaaS instances, still public. (Duffy)
 - ExpressRoute provides dedicated, private connectivity up to 10 Gbps — not over the internet.

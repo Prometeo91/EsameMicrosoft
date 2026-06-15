@@ -1,6 +1,8 @@
 # 04 — Review Questions (AZ-900 Self-Assessment)
 
-> **594 questions** across 6 sections. Sections A–C: book-based questions by exam domain (50). Section D: official Microsoft Learn module assessments (35). Section E: practice questions from IPSpecialist 4th ed. 2024 (416). Section F: ExamTopics & practice quiz questions (93+).
+> **~1264 questions** across 14 sections. Sections A–C: book-based questions by exam domain (50). Section D: official Microsoft Learn module assessments (35). Section E: practice questions from IPSpecialist 4th ed. 2024 (416). Section F: ExamTopics & practice quiz questions (120). Sections G–N: standalone mock exams — G: Scott Duffy Quiz (34), H: Scott Duffy Practice Test (50), I: Practice Test 3 (82), J: Practice Test 4 (125), K: Practice Test 5 (90), L: Practice Test 6 (89), M: Practice Test 7 (86), N: Practice Test 8 (87).
+>
+> ⚠️ **Errata**: Some answers from third-party sources contain known errors, flagged with ⚠️ correction notes. Cross-reference with study files 01–03 when in doubt.
 
 ---
 
@@ -213,7 +215,7 @@
 | B16 | **TRUE** | Deleting a resource group automatically deletes all resources contained in it. |
 | B17 | **FALSE** | Management groups can contain both subscriptions AND other management groups. |
 | B18 | **FALSE** | VNet peering traffic travels over Microsoft's private backbone infrastructure, not the public internet. |
-| B19 | **FALSE** | The redundancy type cannot be changed after a storage account has been created. |
+| B19 | **⚠️ TRUE** | ⚠️ **Correction**: The original answer was FALSE, but this is incorrect. Microsoft docs confirm you CAN change the replication setting of an existing storage account (e.g., LRS → GRS, ZRS → GZRS). Some changes require a support request or data copy. The correct answer is **TRUE**. Note: you cannot change the account *type* (Standard → Premium), which may be the source of confusion. |
 | B20 | **FALSE** | Azure MFA is two-factor authentication (2FA): something you know + something you have. A device's built-in biometrics may add a third factor, but Azure itself doesn't require it. |
 | B21 | **TRUE** | RBAC is additive. If you have Owner on a resource group and Contributor on a resource within it, Owner takes precedence. |
 | B22 | **TRUE** | The book states a limit of 980 resource groups per subscription across all regions. |
@@ -302,7 +304,7 @@
 
 | # | Answer | Explanation |
 |---|---|---|
-| C1 | **b** | The TCO (Total Cost of Ownership) Calculator compares on-premises costs with Azure costs and shows projected savings over 5 years. |
+| C1 | **b** | The TCO (Total Cost of Ownership) Calculator compares on-premises costs with Azure costs and shows projected savings over 5 years. ⚠️ **Note**: The TCO Calculator was deprecated in August 2025. The Pricing Calculator is now the recommended tool for all cost estimation including migration scenarios. This question may still appear on the exam during the transition period. |
 | C2 | **b (False)** | Tags on a resource group are NOT inherited by the resources inside it. Tags must be applied individually. |
 | C3 | **c** | The Deny effect blocks the resource creation or update if it violates the policy. Audit only logs a warning. |
 | C4 | **b** | A delete lock prevents deletion regardless of RBAC role. Even Owners cannot delete a locked resource without first removing the lock. |
@@ -1126,7 +1128,7 @@
 | E52 | **b** | If you create a new subscription, the virtual machines can be moved to the new subscription. |
 | E53 | **b** | Azure Machine Learning Studio is suitable for building, testing, and deploying predictive analytics solutions. |
 | E54 | **c** | Creating a Files service in a storage account allows you to use Azure Storage as a file share for mapping network drives. |
-| E55 | **c** | Azure Cost Management requires an Enterprise Agreement (EA) for tracking and managing costs effectively |
+| E55 | **⚠️ d** | ⚠️ **Correction**: The original answer (c = EA) is incorrect. Azure Cost Management is available to ALL Azure subscription types — Pay-As-You-Go, EA, MCA, and CSP. It is a free, built-in feature. The correct answer is **d) Pay-as-you-go subscription** (or any subscription type). |
 | E56 | **c** | Deciding architecture is crucial the cloud to deployment meet specific type or business requirements for cloud computing. |
 | E57 | **c** | In a public cloud, the cloud provider owns and manages the resources. Users or organizations leverage the services provided by the cloud provider, and the provider takes care of the underlying infrastructure, maintenance, and management of the physical resources, allowing users to focus on deploying and managing their applications and services. |
 | E58 | **c** | The primary advantages of the public cloud approach are lower cost, scalability, and flexibility. |
@@ -2331,7 +2333,7 @@
 | E241 | **a** | Azure load balancer serves the load-balancing feature to the connected virtual machines within Microsoft Azure. It is responsible for managing the network traffic load and enables the use of all VMs for processing. It distributes the traffic load to the Virtual Machine present in the network. The Azure load balancer also delivers high availabili... |
 | E242 | **a and d** | Azure Free Account offers $200 credit for the first 30 days to new Azure users. In the last 12 months of the most popular Azure services like Virtual Machines (VM), Databases, Storage accounts, etc., users can always access 25 Azure services for free. It is an excellent option for new Azure users to explore Azure services. Option B is invalid be... |
 | E243 | **b** | According to the Azure pricing, no charge is required for inbound data transfer. Within the hybrid cloud infrastructure, a large amount of data can be easily transferred from on-premises to Azure cloud free of cost. |
-| E244 | **b** | The company's resources and services come in the computing infrastructure and architecture category, which is normally called Infrastructure as a Service (IaaS) in cloud computing. Azure Kubernetes service is used to manage and deploy instances in the container. It also makes sure that the container is configured correctly and working together. ... |
+| E244 | **⚠️ b** | ⚠️ **Correction**: The original answer classifies AKS as IaaS, but this is incorrect. AKS is **PaaS** — Azure manages the Kubernetes control plane; you deploy and manage containers. This is consistent with N80 in this file which correctly identifies AKS as PaaS. The original IPSpecialist source is wrong here. It also makes sure that the container is configured correctly and working together. ... |
 | E245 | **d** | High Availability is the feature that makes the application available to end-users. This means one application should be implemented in more than one server. If any of the servers go down for some reason, the backup server with the same application immediately starts working. Therefore, the application remains available 24/7 hours. Option A is i... |
 | E246 | **b** | The notification tab shows all the deployment and deletion of actions to Azure resources available in the portal. In the given situation, when the deployment of ips-vm is done, the notification tab shows the notice “Deployment succeeded is shown”. It is clear from the explanation that all the remaining options are invalid as no one provides the ... |
 | E247 | **b** | A VPN gateway helps establish a private connection between Azure resources and an on-premises environment, offices, the cloud, or other premises within the cloud to establish a private, secure connection. |

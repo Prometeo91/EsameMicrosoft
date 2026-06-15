@@ -43,7 +43,7 @@ Azure uses a consumption-based approach — you pay for IT resources as you use 
 
 **Pricing Calculator** (https://azure.microsoft.com/pricing/calculator) — estimate potential Azure expenses. For information purposes only — nothing is provisioned and you won't be charged. You can estimate individual resources, build out a complete solution, or use example scenarios. Compare monthly estimates across regions, service tiers, and redundancy options before deployment. Teams often use it as a baseline for budget approval.
 
-⚠️ **Exam Tip (from Microsoft Learn)**: The **TCO Calculator has been retired**. The Pricing Calculator is the current tool for estimating Azure costs. If the exam still references TCO, remember: it was a tool for comparing on-prem vs. Azure savings over 5 years.
+⚠️ **Exam Tip (from Microsoft Learn)**: The **TCO Calculator has been retired** (August 2025). The Pricing Calculator is the current tool for estimating Azure costs, including migration scenarios. If the exam still references TCO, remember: it was a tool for comparing on-prem vs. Azure savings over 5 years.
 
 ### 📊 Microsoft Cost Management Tool (from Microsoft Learn)
 
@@ -97,7 +97,7 @@ Five support tiers with increasing levels of technical support and response time
 📌 **Key Points — Da ricordare**
 - Six cost factors: resource type, consumption, maintenance (unused resources still cost), geography, subscription type, Azure Marketplace.
 - Four pricing options: Pay-as-you-go (flexible) → Reservations (up to 72% off, specific resource) → Savings Plan (up to 65% off, flexible compute) → Spot (up to 90% off, interruptible only).
-- Pricing Calculator = estimate costs before deployment. TCO Calculator has been retired per Microsoft Learn.
+- Pricing Calculator = estimate costs before deployment. TCO Calculator has been retired (August 2025) — Pricing Calculator now covers migration scenarios too.
 - Cost Management: Cost Analysis (view/explore), Cost Alerts (budget + credit + dept quota), Budgets (spending limits + automation).
 - Tags: 6 use cases, do NOT inherit from resource groups or subscriptions. Use Azure Policy to enforce tagging. Starter set: Environment, Owner, CostCenter, Workload.
 - Support Plans: Basic (free, NO tech tickets) → Developer (email, business hours) → Standard (24/7, < 1hr Sev A) → Professional Direct (24/7, < 15min Sev A) → Premier/Unified (TAM, enterprise).
@@ -131,7 +131,7 @@ A service to create, assign, and manage policies that control or audit Azure res
 
 **Initiatives (from Microsoft Learn):** a way of grouping related policies together to track compliance toward a larger goal. Example: the "Enable Monitoring in Azure Security Center" initiative contains 100+ policy definitions, including monitoring for unencrypted SQL Databases, OS vulnerabilities, and missing Endpoint Protection.
 
-**Six Policy Effects:**
+**Seven Policy Effects:**
 
 | Effect | Action |
 |---|---|
@@ -140,6 +140,7 @@ A service to create, assign, and manage policies that control or audit Azure res
 | **AuditIfNotExists** | Log a warning if a required companion resource type doesn't exist |
 | **Deny** | Block the create/update operation |
 | **DeployIfNotExists** | Auto-deploy a companion resource if not included |
+| **Modify** | Add, update, or remove properties on existing resources (e.g., auto-add missing tags on existing resources) |
 | **Disabled** | Policy is inactive |
 
 **Built-in definitions (from Microsoft Learn):** Azure Policy comes with built-in policy and initiative definitions for Storage, Networking, Compute, Security Center, and Monitoring. Example: define a policy allowing only a certain VM size — it is invoked on new VM creation and when resizing existing VMs. Azure Policy also evaluates all current resources, including those created before the policy existed.
@@ -198,8 +199,8 @@ A portal providing access to content, tools, and resources about Microsoft secur
 When teams use Copilot or agent-assisted workflows, governance controls still apply. RBAC, Azure Policy, resource locks, and auditing ensure that AI-assisted changes remain within approved boundaries. This is a new learning objective for the exam.
 
 📌 **Key Points — Da ricordare**
-- Blueprints bundle ARM templates, policies, RBAC, and resource groups into reusable, versioned packages.
-- Azure Policy: 6 effects (Deny is the most restrictive, Disabled turns it off). Policies are inherited downward. Can prevent creation of noncompliant resources AND auto-remediate (e.g., auto-add missing tags). Evaluates existing resources retroactively.
+- Blueprints bundle ARM templates, policies, RBAC, and resource groups into reusable, versioned packages. ⚠️ Being retired → replaced by Template Specs + Deployment Stacks.
+- Azure Policy: 7 effects (Deny blocks creation, Modify changes existing resources, Disabled turns it off). Policies are inherited downward. Can prevent creation of noncompliant resources AND auto-remediate (e.g., auto-add missing tags). Evaluates existing resources retroactively.
 - Initiatives group related policies toward a compliance goal (e.g., "Enable Monitoring in Security Center" = 100+ policy definitions).
 - Azure Policy integrates with Azure DevOps CI/CD and enforces standards even for AI-assisted / Copilot changes.
 - Resource locks: Delete (read + modify OK, no delete) vs. ReadOnly (read only, like Reader role). Two-step to modify: remove lock → perform action.
