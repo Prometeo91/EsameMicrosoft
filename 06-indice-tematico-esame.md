@@ -1,6 +1,13 @@
 # 06 — Indice Tematico per Dominio d'Esame (AZ-900)
 
-> Mappa di navigazione verso le 1264 domande del file **04-domande-riepilogo.md**, organizzate per dominio e sotto-obiettivo ufficiale Microsoft. Usa questo file per studiare per area tematica e identificare le zone con più/meno copertura.
+> Mappa di navigazione verso le 1264 domande distribuite nei file **04a–04d**, organizzate per dominio e sotto-obiettivo ufficiale Microsoft. Usa questo file per studiare per area tematica e identificare le zone con più/meno copertura.
+>
+> | File | Sezioni | Domande |
+> |------|---------|---------|
+> | **04a-domande-curate.md** | A, B, C, D, G | ~119 |
+> | **04b-domande-ipspecialist.md** | E | ~416 |
+> | **04c-domande-examtopics.md** | F | ~120 |
+> | **04d-practice-test.md** | H, I, J, K, L, M, N | ~609 |
 
 ---
 
@@ -252,22 +259,22 @@ Queste domande sono utili come cultura generale ma difficilmente compaiono all'e
 
 ## 📋 Riepilogo per sezione sorgente
 
-| Sezione | Range | Tot. domande | Focus principale |
-|---------|-------|-------------|------------------|
-| A | A1–A12 | 12 | Cloud Concepts |
-| B | B1–B22 | 22 | Architecture & Services |
-| C | C1–C16 | 16 | Management & Governance |
-| D | D1–D35 | 35 | Trasversale (Microsoft Learn) |
-| E | E1–E428 | 416 | Trasversale (IPSpecialist) |
-| F | F1–F120 | 120 | Trasversale (ExamTopics + Practice Quiz) |
-| G | G1–G34 | 34 | Trasversale (Scott Duffy Udemy) |
-| H | H1–H50 | 50 | Practice Test scenario-based (Scott Duffy Udemy) |
-| I | I1–I83 | 82 | Practice Test 3 concept-based (Udemy) |
-| J | J1–J125 | 125 | Practice Test 4 mixed-format (Udemy) |
-| K | K1–K90 | 90 | Practice Test 5 mixed-format (Udemy) |
-| L | L1–L89 | 89 | Practice Test 6 mixed-format (Udemy) |
-| M | M1–M86 | 86 | Practice Test 7 mixed-format (Udemy) |
-| N | N1–N87 | 87 | Practice Test 8 mixed-format (Udemy) |
+| Sezione | Range | Tot. domande | File | Focus principale |
+|---------|-------|-------------|------|------------------|
+| A | A1–A12 | 12 | 04a | Cloud Concepts |
+| B | B1–B22 | 22 | 04a | Architecture & Services |
+| C | C1–C16 | 16 | 04a | Management & Governance |
+| D | D1–D35 | 35 | 04a | Trasversale (Microsoft Learn) |
+| E | E1–E428 | 416 | 04b | Trasversale (IPSpecialist) |
+| F | F1–F120 | 120 | 04c | Trasversale (ExamTopics + Practice Quiz) |
+| G | G1–G34 | 34 | 04a | Trasversale (Scott Duffy Udemy) |
+| H | H1–H50 | 50 | 04d | Practice Test scenario-based (Scott Duffy Udemy) |
+| I | I1–I83 | 82 | 04d | Practice Test 3 concept-based (Udemy) |
+| J | J1–J125 | 125 | 04d | Practice Test 4 mixed-format (Udemy) |
+| K | K1–K90 | 90 | 04d | Practice Test 5 mixed-format (Udemy) |
+| L | L1–L89 | 89 | 04d | Practice Test 6 mixed-format (Udemy) |
+| M | M1–M86 | 86 | 04d | Practice Test 7 mixed-format (Udemy) |
+| N | N1–N87 | 87 | 04d | Practice Test 8 mixed-format (Udemy) |
 
 ---
 
