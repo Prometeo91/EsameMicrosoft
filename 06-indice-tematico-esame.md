@@ -37,7 +37,7 @@
 | Cloud models: private | A2, A8, E68 |
 | Cloud models: hybrid | A3, D2, E61, E207, E256, E370, E376, G3 |
 | Cloud models: multi-cloud | E62, E65 |
-| Consumption-based model | A12, E66, E69, F12 |
+| Consumption-based model | A12, E66, E69, F12, F26 |
 | CapEx vs OpEx | E109, E204, E262, F21, F25, F33 |
 | Appropriate use case per cloud model | E56, E382, E383, E384, E387, E388, F10, F11 |
 
@@ -71,7 +71,7 @@
 | PaaS — definizione e casi d'uso | A4, A10, A11, E379, F28, F31, G8 |
 | SaaS — definizione e casi d'uso | A5, D8, E202, F22, F23, F30, G9 |
 | Confronto IaaS/PaaS/SaaS | F24, F27, F29, F30 |
-| Serverless (Azure Functions) | D13, E364, F36, F41 |
+| Serverless (Azure Functions) | D13, E364, F35, F36, F41, F62 |
 
 **Conteggio**: ~31 domande
 
@@ -111,7 +111,7 @@
 | Azure App Service | A4, A11, D14, E367, F7, F9, F53, F114, G13 |
 | Azure Functions | D13, E364, F36, F41 |
 | Azure Container Instances (ACI) | B5, F117, F118 |
-| Azure Kubernetes Service (AKS) | E244, F45, F118 |
+| Azure Kubernetes Service (AKS) | E244, F44, F45, F118 |
 | Azure Virtual Desktop | E75, E76, E77, E79, E391 |
 | Azure Batch | E374 |
 | Azure Dedicated Hosts | E338 |
@@ -137,7 +137,7 @@
 
 | Sotto-tema | Domande |
 |------------|---------|
-| Storage redundancy: LRS, ZRS, GRS, GZRS, RA-GRS | B9, D21, E21–E35, E366, F1, F59, F101 |
+| Storage redundancy: LRS, ZRS, GRS, GZRS, RA-GRS | B9, B19, D21, E21–E35, E366, F1, F59, F101 |
 | Blob Storage | B8, D22, E357, E358, F46, F48, F55, F64, G16 |
 | File Storage (Azure Files) | E54, E359, F37, F54 |
 | Table Storage | F103 |
@@ -187,7 +187,7 @@
 | Tags (cost tracking) | C2, D27, E14, E343, F93, F99, G25 |
 | Reservations | C12, E81, E362, F107 |
 | Spot VMs | D29, E363 |
-| Factors affecting cost | C11, E205, E237, E243, E260, G23 |
+| Factors affecting cost | C11, E205, E237, E243, E260, F39, G23 |
 | PAYG / expenditure models | E66, E387, F10, F11, F12, F116 |
 | Cost optimization (Advisor) | E210, F109, F113 |
 | Resource group cost (free) | E249, F111 |
@@ -200,7 +200,7 @@
 
 | Sotto-tema | Domande |
 |------------|---------|
-| Azure Policy | C3, D30, E49, E50, E300, E342, E418, F75, F79, F94, F97 (contrast), G26, G28 |
+| Azure Policy | C3, D30, E49, E50, E300, E342, E418, F50, F75, F79, F94, F97 (contrast), G26, G28 |
 | Azure Blueprints | C10, C13, E258, E304, E344, F87 |
 | Resource Locks | C4, C9, C15, D31, E254, E302, F78, F97 |
 | Microsoft Purview | F57 |
@@ -248,7 +248,7 @@ Queste domande sono utili come cultura generale ma difficilmente compaiono all'e
 | Azure Cosmos DB (dettagli avanzati) | E131–E150, E354–E356 |
 | Azure Synapse Analytics | E151–E160, E185 |
 | Azure IoT Hub (dettagli) | E161–E179 |
-| Azure Machine Learning (dettagli) | E53, E181–E190, E427 |
+| Azure AI Services / Machine Learning | D15, E53, E181–E190, E427, F13, F15 |
 | NIST CSF / compliance framework (dettagli) | E191–E200 |
 | VM Reservations (procedure acquisto) | E83–E98 |
 | Azure support plans (dettagli) | F2, F3, E305, E306, E308, E309 |
