@@ -3910,7 +3910,7 @@
 | F27 | **c** | Azure VMs = IaaS. You rent the hardware and manage the OS and above. |
 | F28 | **c** | App Service, SQL Database, and Cosmos DB are all PaaS — provider manages infrastructure, you manage app code and data. |
 | F29 | **c** | Hybrid cloud minimizes both CapEx (burst to public cloud instead of buying hardware) and OpEx (keep existing on-prem for baseline). Public cloud alone wouldn't minimize OpEx for the existing on-prem workload. |
-| F30 | **c** | Office 365 = SaaS (you use the app), Azure VMs = IaaS (you manage the OS), Event Grid = PaaS (serverless event routing). |
+| F30 | **c** | Office 365 = SaaS (you use the app), Azure VMs = IaaS (you manage the OS), Event Grid = **Serverless** (event routing, pay per event). Since Serverless is not listed as an option, PaaS is the closest standard classification. |
 | F31 | **b** | Azure MySQL Database is a managed database service = PaaS. Provider handles OS, patching, backups. |
 | F32 | **b** | Elasticity = automatically scale up/down based on demand. Scalability is the general ability to handle growth; elasticity is the automatic response to spikes. |
 | F33 | **b** | Moving to Azure = pay-as-you-go = OpEx (Operational Expenditure). On-prem hardware = CapEx. |
@@ -4178,7 +4178,7 @@
 | F84 | **b** | Microsoft Authenticator app supports OATH TOTP tokens as a second factor. It works with Entra ID and other identity providers. |
 | F85 | **b** | Microsoft Defender for Cloud provides a regulatory compliance dashboard that checks your Azure environment against industry standards (ISO, PCI DSS, SOC, etc.). |
 | F86 | **a** | Zero Trust's three principles: 1) Verify explicitly (always authenticate/authorize), 2) Use least privilege access (JIT/JEA), 3) Assume breach (minimize blast radius). |
-| F87 | **d** | Azure Blueprints bundle ARM templates, RBAC, policies, and resource groups into a reusable, versioned package for repeatable environment deployment. |
+| F87 | **d** | Azure Blueprints bundle ARM templates, RBAC, policies, and resource groups into a reusable, versioned package for repeatable environment deployment. ⚠️ Blueprints is being retired → replaced by Template Specs + Deployment Stacks. |
 | F88 | **a** | Yes. Entra ID Cloud Sync (or Entra Connect) synchronizes on-prem AD with Entra ID, enabling SSO and MFA across both environments. |
 | F89 | **c** | Security groups in Entra ID are used to group users and assign permissions to resources (including O365). Resource groups organize Azure resources; Management groups organize subscriptions. |
 | F90 | **b** | Authentication = verifying identity ("who are you?"). MFA adds extra verification factors. Authorization = "what can you do?" after identity is confirmed. |
@@ -5057,7 +5057,7 @@
 | I38 | **Azure Files** | Azure Files = SMB + NFS. Mountable as drive letter. Replace/supplement on-prem file servers. (PT3) |
 | I39 | **Patching the OS of virtual machines** | IaaS = customer manages from OS up. CSP handles physical infra, network, platform. (PT3) |
 | I40 | **Costs only during execution + Azure auto-adjusts capacity** | Serverless = no server management, auto-scaling, pay-per-execution. NOT dedicated hardware. NOT VM OS config. (PT3) |
-| I41 | **Azure Cost Management and Billing** | Cost Management = spending analysis, budgets, cost optimization. Advisor also recommends but Cost Management is the primary cost tool. (PT3) |
+| I41 | **⚠️ Azure Cost Management and Billing** | ⚠️ **Correction**: The question says "recommendations to optimize spending" which maps to **Azure Advisor** (Cost category), not Cost Management. Cost Management provides cost analysis, budgets, and alerts — Advisor provides **recommendations**. (PT3) |
 | I42 | **When you need additional VMs/compute to speed up your application** | Scale out = add more instances. Scale up = bigger instance. Scale out ≠ reduce cost or get stronger CPU. (PT3) |
 | I43 | **Hybrid** | Hybrid = keep regulated data on-prem + leverage cloud for less sensitive workloads. (PT3) |
 | I44 | **Azure Government** | Sovereign cloud. Federal/state/local/tribal governments + partners only. (PT3) |
@@ -5072,7 +5072,7 @@
 | I53 | **Cloud-based identity and access management service** | Not storage, not network security, not app deployment. (PT3) |
 | I54 | **Establish multiple layers of security controls to mitigate risks** | Not single layer. Not physical only. Not outsourcing. (PT3) |
 | I55 | **Near unlimited scalability with on-demand resources** | NOT: resources not shared (that's private). NOT: full customization (that's private). NOT: hardware shipped to you. (PT3) |
-| I56 | **Yes, but only by the subscription owner** | Multiple locks can coexist. Subscription owner/authorized users can add locks. (PT3) |
+| I56 | **Yes, but only by the subscription owner** | ⚠️ "Only subscription owner" is too narrow. Any user with **Owner or User Access Administrator** role can add locks. Multiple locks can coexist on a resource. (PT3) |
 | I57 | **Natively integrates with Azure services for monitoring and protection** | Built-in. No separate agent deployment needed for Azure-native services. (PT3) |
 | I58 | **Azure Storage Account** | Storage Account provides Azure Files. Tricky: Azure Files would be ideal but Storage Account is the best available option. (PT3) |
 | I59 | **Yes** | AZs = physically separate DCs within a region. 99.99% SLA across 2+ zones. (PT3) |
@@ -5424,7 +5424,7 @@
 | J62 | **Hybrid cloud** |  (PT4) |
 | J63 | **Azure Service Health** |  (PT4) |
 | J64 | **Azure Government** |  (PT4) |
-| J65 | **Policy assignments** |  (PT4) |
+| J65 | **Policy assignments** | ⚠️ Azure Blueprints is being retired → replaced by Template Specs + Deployment Stacks. (PT4) |
 | J66 | **Unlimited data storage** |  (PT4) |
 | J67 | **A Subscription** | Hierarchy: Tenant → Subscription → Resource Group → Resource. (PT4) |
 | J68 | **IaaS** |  (PT4) |
@@ -5441,7 +5441,7 @@
 | J79 | **Azure Resource Manager** |  (PT4) |
 | J80 | **Azure Blob Storage** |  (PT4) |
 | J81 | **Virtual Network Peering** |  (PT4) |
-| J82 | **Yes, subscription owner can** |  (PT4) |
+| J82 | **Yes, subscription owner can** | ⚠️ Not limited to subscription owner — any user with **Owner or User Access Administrator** role can add locks. (PT4) |
 | J83 | **Resource usage** |  (PT4) |
 | J84 | **Zone Redundant Storage (ZRS)** |  (PT4) |
 | J85 | **Yes** |  (PT4) |
@@ -5455,7 +5455,7 @@
 | J93 | **Resource Groups** |  (PT4) |
 | J94 | **Full support for both Azure CLI and PowerShell** |  (PT4) |
 | J95 | **50** |  (PT4) |
-| J96 | **Preserves relationship between definition and assignment** |  (PT4) |
+| J96 | **Preserves relationship between definition and assignment** | ⚠️ Azure Blueprints is being retired → replaced by Template Specs + Deployment Stacks. (PT4) |
 | J97 | **Budget alerts** |  (PT4) |
 | J98 | **Network Security Group (NSG)** |  (PT4) |
 | J99 | **PaaS** |  (PT4) |
@@ -5479,7 +5479,7 @@
 | J117 | **Pricing, TCO** | ⚠️ TCO deprecated August 2025. (PT4) |
 | J118 | **Yes** |  (PT4) |
 | J119 | **Elasticity** |  (PT4) |
-| J120 | **Prevent modifications but allow read access** |  (PT4) |
+| J120 | **Prevent modifications but allow read access** | ⚠️ This describes only the **ReadOnly** lock. There are TWO lock types: **Delete** (read+modify OK, no delete) and **ReadOnly** (read only, no modify or delete). (PT4) |
 | J121 | **All of the above** |  (PT4) |
 | J122 | **Initiatives** |  (PT4) |
 | J123 | **Horizontal adjusts number of resources; vertical adjusts capabilities** |  (PT4) |
@@ -5727,7 +5727,7 @@
 | K50 | **High availability + Scalability** |  (PT5) |
 | K51 | **Availability Zones** |  (PT5) |
 | K52 | **Azure Monitor** |  (PT5) |
-| K53 | **Site-to-Site (IPsec)** |  (PT5) |
+| K53 | **⚠️ Site-to-Site (IPsec)** | ⚠️ **Correction**: VPN between two Azure VNets is a **Network-to-Network (VNet-to-VNet)** connection, not Site-to-Site. Site-to-Site is for on-premises → Azure. For Azure-to-Azure, **VNet Peering** is simpler and preferred. (PT5) |
 | K54 | **Lift-and-shift migration** |  (PT5) |
 | K55 | **Agility** |  (PT5) |
 | K56 | **No** |  (PT5) |
@@ -6235,7 +6235,7 @@
 | M9 | **True** |  (PT7) |
 | M10 | **Azure File Sync** |  (PT7) |
 | M11 | **Rehydrate it** |  (PT7) |
-| M12 | **Extending Azure Policy and Blueprints to on-prem + multi-cloud** |  (PT7) |
+| M12 | **Extending Azure Policy and Blueprints to on-prem + multi-cloud** | ⚠️ Blueprints is being retired. Arc primarily extends Azure Policy, RBAC, and tags — not Blueprints. (PT7) |
 | M13 | **Operational (OpEx)** |  (PT7) |
 | M14 | **VM size** |  (PT7) |
 | M15 | **Azure TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT7) |
@@ -6263,7 +6263,7 @@
 | M37 | **Containers** |  (PT7) |
 | M38 | **Subscription** |  (PT7) |
 | M39 | **Data ingress within same AZ** | Billing factors: region, account type, access tier, capacity, redundancy, transactions, data egress. (PT7) |
-| M40 | **Host app, manage OS, don't manage underlying hardware** |  (PT7) |
+| M40 | **Host app, manage OS, don't manage underlying hardware** | ⚠️ Ambiguous wording: in PaaS the **provider** manages the OS, not you. You manage app code + data only. (PT7) |
 | M41 | **Fault tolerance** |  (PT7) |
 | M42 | **Intra-region** |  (PT7) |
 | M43 | **Deploy web app, focus only on coding** |  (PT7) |
@@ -6306,7 +6306,7 @@
 | M80 | **False** | B2C = customer-facing. B2B = partner collaboration. (PT7) |
 | M81 | **High availability** |  (PT7) |
 | M82 | **Elasticity** |  (PT7) |
-| M83 | **Entra B2C** |  (PT7) |
+| M83 | **⚠️ Entra B2C** | ⚠️ **Correction**: B2C is for consumer-facing apps (social logins), NOT for corporate credentials. Using existing corporate credentials for cloud apps is the core function of **Microsoft Entra ID (SSO)**, or **Entra B2B** for partner organizations. (PT7) |
 | M84 | **Yes** |  (PT7) |
 | M85 | **AzCopy** |  (PT7) |
 | M86 | **Private, Public** |  (PT7) |
@@ -6528,15 +6528,15 @@
 | N32 | **Azure Kubernetes (AKS)** |  (PT8) |
 | N33 | **Extend Azure data services to on-prem + multi-cloud** |  (PT8) |
 | N34 | **True** |  (PT8) |
-| N35 | **GRS** |  (PT8) |
+| N35 | **GRS** | GRS and GZRS both have 16 nines of durability. GZRS is the highest redundancy option (adds zone protection on primary). (PT8) |
 | N36 | **Yes** |  (PT8) |
 | N37 | **No** |  (PT8) |
 | N38 | **Containers** |  (PT8) |
 | N39 | **No (OpEx)** |  (PT8) |
 | N40 | **Azure Migrate** |  (PT8) |
 | N41 | **Public cloud** |  (PT8) |
-| N42 | **Host app + manage OS, don't manage hardware** |  (PT8) |
-| N43 | **Blueprints** |  (PT8) |
+| N42 | **Host app + manage OS, don't manage hardware** | ⚠️ Ambiguous wording: in PaaS the **provider** manages the OS, not you. You manage app code + data only. (PT8) |
+| N43 | **Blueprints** | ⚠️ Azure Blueprints is being retired → replaced by Template Specs + Deployment Stacks. (PT8) |
 | N44 | **Fault tolerance** |  (PT8) |
 | N45 | **Azure TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT8) |
 | N46 | **Deploy web app, focus on coding** |  (PT8) |
@@ -6556,7 +6556,7 @@
 | N60 | **Create a Storage Account** |  (PT8) |
 | N61 | **Unified solution to manage/govern data across cloud + on-prem** |  (PT8) |
 | N62 | **Containers** |  (PT8) |
-| N63 | **No (CapEx — upfront payment)** |  (PT8) |
+| N63 | **⚠️ No (CapEx — upfront payment)** | ⚠️ **Correction**: Cloud reservations are **OpEx**, not CapEx. CapEx = upfront spending on **physical infrastructure** you own. Reservations are a commitment to pay for cloud services — no physical asset is purchased. Microsoft classifies all cloud spending (including reservations) as OpEx. (PT8) |
 | N64 | **Desired state of resources + configuration** |  (PT8) |
 | N65 | **Private, Hybrid** |  (PT8) |
 | N66 | **Resources** |  (PT8) |
