@@ -94,6 +94,16 @@ BEST:   Passwordless (Hello, Authenticator, FIDO2)
 Physical → Identity & Access → Perimeter → Network → Compute → Application → Data
 ```
 
+### Azure Key Vault — What It Stores
+
+| Type | Examples |
+|---|---|
+| **Secrets** | Passwords, connection strings, API keys |
+| **Encryption keys** | RSA/EC key pairs, HSM-backed (Premium tier) |
+| **Certificates** | TLS/SSL with auto-renewal |
+
+**Key points**: managed identities retrieve secrets at runtime (no hard-coded credentials). Access control + key rotation + usage auditing. HSM-backed keys never leave the HSM boundary (Premium tier).
+
 ### External Identities
 
 | Type | Who | In Your Directory? |

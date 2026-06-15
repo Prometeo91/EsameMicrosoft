@@ -2465,7 +2465,7 @@
 
 **E283.** A company wants to have a service that could fulfil the below requirement. “Provide the ability to generate keys in hardware security modules that never leave the hardware security module boundary.” Which of the following services could be used for this requirement?
 - a) Microsoft Defender for Cloud
-- b) Azure Key vault
+- b) Azure Key Vault
 - c) Azure Network Security Groups
 - d) Azure Advisor
 

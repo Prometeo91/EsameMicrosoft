@@ -158,7 +158,7 @@
 | Zero Trust | B13, D24, F86 |
 | Defense in Depth | E375 |
 | Microsoft Defender for Cloud | E290, E340, E341, F70, F81, F85, F104, F105, G21 |
-| Azure Key Vault | D26, E184, E206, E339 |
+| Azure Key Vault | D26, E184, E206, E226, E283, E339 |
 | Identity Protection | F76, F92 |
 | Azure Information Protection / Purview | E209, E298, F57 |
 
