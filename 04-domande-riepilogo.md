@@ -5363,7 +5363,7 @@
 | J1 | **IaaS** | VMs = virtualized compute. You manage OS and apps. IaaS = renting infrastructure. (PT4) |
 | J2 | **AzCopy** | VMs = virtualized compute. You manage OS and apps. IaaS = renting infrastructure. (PT4) |
 | J3 | **Region Pair** |  (PT4) |
-| J4 | **Yes** |  (PT4) |
+| J4 | **Yes** | Location = where metadata is stored. Resources inside can be in any region. (PT4) |
 | J5 | **Data and Identities** | Regardless of IaaS/PaaS/SaaS, customer always owns data and identities. (PT4) |
 | J6 | **Yes** | Budgets = set limits + alert notifications. NOT: auto-increase, suspend usage, or generate invoices. (PT4) |
 | J7 | **Azure Container Registry** |  (PT4) |
@@ -5404,7 +5404,7 @@
 | J42 | **No** |  (PT4) |
 | J43 | **Authentication** |  (PT4) |
 | J44 | **PowerShell; Bash** |  (PT4) |
-| J45 | **Ensure secure configurations of workloads and resources** | Location = where metadata is stored. Resources inside can be in any region. (PT4) |
+| J45 | **Ensure secure configurations of workloads and resources** |  (PT4) |
 | J46 | **Scalability** |  (PT4) |
 | J47 | **SAML** |  (PT4) |
 | J48 | **Yes** |  (PT4) |
@@ -5415,18 +5415,18 @@
 | J53 | **No** |  (PT4) |
 | J54 | **No** | Resources can connect to resources in other RGs. (PT4) |
 | J55 | **Azure Files** |  (PT4) |
-| J56 | **Yes** | NOT: auto-increase, suspend usage, or send invoice. (PT4) |
+| J56 | **Yes** |  (PT4) |
 | J57 | **Availability Zone** |  (PT4) |
 | J58 | **Costs only during execution** |  (PT4) |
-| J59 | **Budget alert is triggered** |  (PT4) |
+| J59 | **Budget alert is triggered** | NOT: auto-increase, suspend usage, or send invoice. (PT4) |
 | J60 | **When you need additional VMs/compute** |  (PT4) |
-| J61 | **CanNotDelete Lock** | Hierarchy: Tenant → Subscription → Resource Group → Resource. (PT4) |
+| J61 | **CanNotDelete Lock** |  (PT4) |
 | J62 | **Hybrid cloud** |  (PT4) |
 | J63 | **Azure Service Health** |  (PT4) |
 | J64 | **Azure Government** |  (PT4) |
 | J65 | **Policy assignments** |  (PT4) |
 | J66 | **Unlimited data storage** |  (PT4) |
-| J67 | **A Subscription** |  (PT4) |
+| J67 | **A Subscription** | Hierarchy: Tenant → Subscription → Resource Group → Resource. (PT4) |
 | J68 | **IaaS** |  (PT4) |
 | J69 | **Azure Activity Log** |  (PT4) |
 | J70 | **Public** |  (PT4) |
@@ -5754,16 +5754,16 @@
 | K77 | **No** | Budgets send alerts only. Do NOT stop/pause resources. Need Azure Automation for that. (PT5) |
 | K78 | **False** | PaaS can scale up/out dynamically without re-deployment. (PT5) |
 | K79 | **SSO + MFA + Passwordless** |  (PT5) |
-| K80 | **Reserved = consistent workloads; consumption = variable demand** | = Community cloud characteristics. NOT: broadest public accessibility. NOT: necessarily third-party managed. (PT5) |
-| K81 | **Resources shared among specific group** |  (PT5) |
-| K82 | **Geography** | Resources deactivated, not immediately deleted. Waiting period before permanent deletion. (PT5) |
+| K80 | **Reserved = consistent workloads; consumption = variable demand** |  (PT5) |
+| K81 | **Resources shared among specific group** | = Community cloud characteristics. NOT: broadest public accessibility. NOT: necessarily third-party managed. (PT5) |
+| K82 | **Geography** |  (PT5) |
 | K83 | **Entra Conditional Access** |  (PT5) |
-| K84 | **Elasticity** | NOT: customer manages OS. NOT: dedicated VMs per function. (PT5) |
-| K85 | **No** |  (PT5) |
+| K84 | **Elasticity** |  (PT5) |
+| K85 | **No** | Resources deactivated, not immediately deleted. Waiting period before permanent deletion. (PT5) |
 | K86 | **Log Analytics** |  (PT5) |
 | K87 | **Yes** |  (PT5) |
 | K88 | **High availability and durability in face of failures** |  (PT5) |
-| K89 | **Provider auto-scales based on events** |  (PT5) |
+| K89 | **Provider auto-scales based on events** | NOT: customer manages OS. NOT: dedicated VMs per function. (PT5) |
 | K90 | **Datacenters** |  (PT5) |
 ---
 
