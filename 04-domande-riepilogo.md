@@ -207,7 +207,7 @@
 | B8 | **b** | Archive-tier Blobs must be rehydrated to Hot or Cool tier before they can be accessed. |
 | B9 | **d** | GZRS = ZRS in primary region (3 zones) + LRS in secondary region (3 copies). Most durable option. |
 | B10 | **c** | Azure Data Box (80 TB capacity) is designed for large-scale offline data migration. AzCopy and Storage Explorer are for smaller transfers. |
-| B11 | **c** | Azure AD Connect synchronizes on-premises Windows AD with Azure AD. |
+| B11 | **c** | Azure AD Connect (now **Microsoft Entra Connect**) synchronizes on-premises Windows AD with Azure AD (now **Microsoft Entra ID**). ⚠️ All "Azure AD" names in this question use deprecated terminology — the exam may use either form. |
 | B12 | **b** | Contributor can create/manage resources but cannot assign roles to others. Owner has full access including delegation. |
 | B13 | **c** | Zero Trust assumes all access is potentially malicious and enforces Conditional Access, MFA, and least-privilege. |
 | B14 | **b** | VPN Gateway secures connections using IPSec (Internet Protocol Security) and IKE (Internet Key Exchange). |
@@ -216,7 +216,7 @@
 | B17 | **FALSE** | Management groups can contain both subscriptions AND other management groups. |
 | B18 | **FALSE** | VNet peering traffic travels over Microsoft's private backbone infrastructure, not the public internet. |
 | B19 | **⚠️ TRUE** | ⚠️ **Correction**: The original answer was FALSE, but this is incorrect. Microsoft docs confirm you CAN change the replication setting of an existing storage account (e.g., LRS → GRS, ZRS → GZRS). Some changes require a support request or data copy. The correct answer is **TRUE**. Note: you cannot change the account *type* (Standard → Premium), which may be the source of confusion. |
-| B20 | **FALSE** | Azure MFA is two-factor authentication (2FA): something you know + something you have. A device's built-in biometrics may add a third factor, but Azure itself doesn't require it. |
+| B20 | **FALSE** | Azure MFA requires two or more verification factors (not three). Categories: something you know (password) + something you have (phone/key) + something you are (biometric). MFA means at least 2 factors, not necessarily all 3. |
 | B21 | **TRUE** | RBAC is additive. If you have Owner on a resource group and Contributor on a resource within it, Owner takes precedence. |
 | B22 | **TRUE** | The book states a limit of 980 resource groups per subscription across all regions. |
 
@@ -313,7 +313,7 @@
 | C7 | **c** | Azure Arc extends management to servers and Kubernetes clusters running on-premises or in other cloud providers (not limited to Azure or Windows). |
 | C8 | **c** | Log Analytics uses KQL for querying aggregated monitoring data. KQL can handle massive datasets. |
 | C9 | **c** | Creating resource locks requires the Owner or User Access Administrator RBAC role (or a custom role with lock permissions). |
-| C10 | **b** | Azure Blueprints package ARM templates, policies, role assignments, and resource groups into reusable, versioned deployment definitions. |
+| C10 | **b** | Azure Blueprints package ARM templates, policies, role assignments, and resource groups into reusable, versioned deployment definitions. ⚠️ **Note**: Azure Blueprints is being retired — replaced by **Template Specs** + **Deployment Stacks**. May still appear on the exam during the transition period. |
 | C11 | **TRUE** | Inbound (ingress) traffic to Azure is free. You're charged for outbound (egress) traffic after the first 100 GB. |
 | C12 | **TRUE** | Azure Reservations offer significant discounts for committing to 1-year or 3-year resource usage upfront. |
 | C13 | **FALSE** | Blueprints are NOT a replacement for ARM templates. Most blueprints use ARM templates as artifacts. |
@@ -945,7 +945,7 @@
 | E32 | **b** | Applications can be designed to shift to reading data from the secondary region by configuring RAGRS. |
 | E33 | **b** | The recovery point objective (RPO) in asynchronous geo-replication is the interval between the most recent writes to the primary region and the last write that has been successfully replicated to the secondary region. |
 | E34 | **d** | Geo-zone-redundant designed maximum for storage consistency, (GZRS) durability, is and availability. |
-| E35 | **d** | Azure Files does not support Geo-zoneredundant storage (GZRS). GZRS is a replication option that provides redundancy across availability zones within a region, but Azure Files currently does not offer support for this level of redundancy. |
+| E35 | **⚠️ d** | ⚠️ **Correction**: Azure Files DOES support GZRS in Standard GP v2 accounts. The actual limitation is that **RA-GRS / RA-GZRS** (read-access geo variants) are not available for Azure Files. The original source confuses GZRS with RA-GZRS. |
 | E36 | **b** | Naming conventions help ensure the uniqueness of resource names within a given scope. |
 | E37 | **d** | A resource can only be created in a virtual network that exists in the same region and subscription. |
 | E38 | **d** | Consider factors like network latency, data residency, sovereignty, compliance, and availability zone support when deciding on Azure regions. |
@@ -1312,9 +1312,9 @@
 | E91 | **a** | The correct steps are All Reservations > Add > Virtual machine. |
 | E92 | **c** | The 'Scope' field specifies the reservation's scope, such as a single subscription or shared scope. |
 | E93 | **b** | 'Optimize for' refers to adjusting VM instance size flexibility. |
-| E94 | **c** | Available terms for purchasing are one year, three years, and five years. |
+| E94 | **⚠️ c** | ⚠️ **Correction**: Azure Reservations are available for **1 year or 3 years only** — there is no 5-year term. The correct answer should exclude the 5-year option. |
 | E95 | **a** | The quantity is the number of running VM instances that can get the billing discount. |
-| E96 | **d** | The effective price of zero indicates that the usage gets a reservation discount. |
+| E96 | **d** | ⚠️ Duplicate of E95 — explanation appears mismatched (discusses pricing, not quantity). Cross-reference with E95. |
 | E97 | **b** | Ownership and scope can be changed without causing a new commercial transaction. |
 | E98 | **d** | Splitting and merging reservations help optimize billing and discount distribution. |
 | E99 | **c** | The AdditionalInfo field provides correct information about VM size for reservation purchase. |
@@ -2347,7 +2347,7 @@
 | E255 | **a** | According to the Microsoft documentation, Azure offers a free trial using Azure Free Account. It offers a $200 credit for the first 30 days to new Azure customers. To explore the Azure service, customers need more time to use these services, which is a reason Microsoft created an Azure free account. With this account, Azure customers use service... |
 | E256 | **a** | An organization can integrate on-premises networking, identity compute, and data resources with Azure. The hybrid approach brings an advantage when an organization uniquely hosts infrastructure and service in the on-premises network. Azure integration with on-premises comprises those features that can be scaled out and provision the hybrid cloud... |
 | E257 | **b** | Scalability is the ability that manages the traffic load and makes the provision of service without affecting network performance. This feature automatically allocates resources to meet the performance requirement defined in the Service Level Agreement (SLA). Option A is invalid because Disaster Recovery is a mandatory plan adopted by each IT or... |
-| E258 | **a** | Azure Blueprint enables us to design and package the entire Azure environment, including preferred policy, ARM template, and role-based access assignment. These blueprints are assigned to many subscriptions, which can help us to scale up the use of Azure. |
+| E258 | **a** | ⚠️ Azure Blueprints è in fase di ritiro — sostituito da Template Specs + Deployment Stacks. Azure Blueprint enables us to design and package the entire Azure environment, including preferred policy, ARM template, and role-based access assignment. These blueprints are assigned to many subscriptions, which can help us to scale up the use of Azure. |
 | E259 | **b and d** | To meet the business requirements, the two metrics that ensure the customer SLA are Mean time to recover (MTTR) and Mean time between failures (MTBF). All the remaining options are invalid. |
 | E260 | **c and d** | If you look at the pricing calculator for an Azure Virtual Machine, you see the different parameters that make up the cost of the Virtual Machine. There as aspects such as the region, the operating system, the type, the tier, and instance size. |
 | E261 | **a** | The Company can consider buying Reserved Instances to get discounts on the virtual machines’ running costs The Microsoft documentation mentions the following. You can save money when you commit to an Azure-reserved VM instance. The reservation discount is applied automatically to the number of Virtual Machines matching the reservation scope and ... |
@@ -2494,7 +2494,7 @@
 | # | Answer | Explanation |
 |---|---|---|
 | E263 | **c** | If you go to Cost Management, you will get a Cost breakdown by resource. Since this is clear from the implementation, all other options are incorrect. |
-| E264 | **a** | You can use the Total Cost of Ownership calculator to see the cost savings you can achieve by moving workloads to Azure. A snapshot of the TCO Calculator is shown below. The other options are invalid because they help cost management after moving to Azure. |
+| E264 | **a** | ⚠️ TCO Calculator deprecato (agosto 2025) — ora si usa il Pricing Calculator anche per scenari di migrazione. You can use the Total Cost of Ownership calculator to see the cost savings you can achieve by moving workloads to Azure. A snapshot of the TCO Calculator is shown below. The other options are invalid because they help cost management after moving to Azure. |
 | E265 | **a** | You can deploy your resources across multiple regions. If a disaster and one region go down, you will still have another available. The Microsoft documentation mentions the following. Disaster recovery also refers to minimizing IT services disruption and recovery, but across various data centers that might be hundreds of miles away from one anot... |
 | E266 | **a** | With the Azure Load Balancer, you can increase the overall availability of your applications. The Microsoft documentation mentions the following. With Azure Load Balancer, you can scale your applications and create highly available services. Load Balancer supports both inbound and outbound scenarios. A load balancer provides low latency and high... |
 | E267 | **d** | When deciding on the support for which service to use for web applications, consider using the Azure App Service. The Microsoft documentation mentions the following. Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile backends. You can develop in your favorite language, be it .NET, .NET Core, Java, Ruby... |
@@ -2682,16 +2682,16 @@
 | E297 | **d** | Option A is incorrect because if there are multiple subscriptions, manual counting is not efficient. Option B is incorrect because manual counting is required even for the Manage view. Option C is incorrect because Applying Filters would again lead to a manual count. Option D is CORRECT because the total count can be retrieved using Azure Resour... |
 | E298 | **b and d** | Application Option A is Administrator incorrect because is of part Cloud Application Administrators. Option B is CORRECT because please see the referring URL for the AIP roles list. Option C is incorrect because the Group Administrator has access to Administrative features. Option D is CORRECT because please see the referring URL for the AIP rol... |
 | E299 | **b** | Option A is CORRECT because all the 3 requirements can be implemented using Monitored activities. Option B is incorrect because only Password Protections options are available. Option C is incorrect because it is used for Identity Protection only. Option D is incorrect because it is used only for important resources. Microsoft Defender for Ident... |
-| E300 | **b** | Option A is incorrect because Azure Monitor primarily analyzes the telemetry data. Option B is CORRECT because please view the reference URL for creating policy assignments. Option C is CORRECT because please view the reference URL for creating policy assignments. Option D is CORRECT because please view the reference URL for creating policy assi... |
+| E300 | **b, c, d** | ⚠️ La domanda chiede 3 risposte: b, c, d sono tutte corrette. Option A is incorrect because Azure Monitor primarily analyzes the telemetry data. Option B is CORRECT because please view the reference URL for creating policy assignments. Option C is CORRECT because please view the reference URL for creating policy assignments. Option D is CORRECT because please view the reference URL for creating policy assi... |
 | E301 | **a** | Option A is CORRECT because please view the reference URL, Active Directory limits section. Option B is incorrect because it would be effective immediately only on logout\login. Option C is incorrect because please view the reference URL, Active Directory limits section. Option D is incorrect because please view the reference URL, Active Directo... |
 | E302 | **c** | There are two types of locks available: delete and read-only. A Read-only lock on an SQL Database prevents you from deleting or modifying the database. It does not prevent you from creating, updating, or deleting data in the database. |
 | E303 | **a** | Option A is CORRECT because ITSM Connector exists to integrate Azure with Service now. Option B is incorrect because it requires custom requires custom development to achieve the integration. Option C is incorrect because it development to achieve the integration. Option D is incorrect because a connector exists to integrate Azure and specific I... |
-| E304 | **c** | Option A is incorrect because these are the locks for the resources and not modes. Option B is incorrect because these are the states of the resources and not modes. Option C is CORRECT because please see the diagram below. Option D is incorrect because “Update” is an invalid lock option, and ReadOnly is a lock on a resource. |
+| E304 | **c** | ⚠️ Azure Blueprints è in fase di ritiro — sostituito da Template Specs + Deployment Stacks. Option A is incorrect because these are the locks for the resources and not modes. Option B is incorrect because these are the states of the resources and not modes. Option C is CORRECT because please see the diagram below. Option D is incorrect because “Update” is an invalid lock option, and ReadOnly is a lock on a resource. |
 | E305 | **b** | The most cost-effective plan with these points is the Developer plan. The Microsoft documentation mentions the following. |
 | E306 | **a** | Yes, everyone has access to the Knowledge Center. |
 | E307 | **b** | Azure Service Level Agreements (SLAs) are formal commitments made by Microsoft Azure to ensure the reliability and availability of its cloud services. These SLAs specify the guaranteed uptime percentage for each Azure service, such as Virtual Machines, Blob Storage, and SQL Database, among others. The uptime percentages typically range from 99.9... |
 | E308 | **a** | You can launch a support request via the Azure portal. The Microsoft documentation mentions the following. Azure portal for commercial use is: |
-| E309 | **a** | This is provided in the FAQ section for Azure support. |
+| E309 | **a, b, c** | ⚠️ La domanda chiede 3 risposte: Account Administrator, Service Administrator e Co-Administrator possono tutti aprire richieste di supporto per default. This is provided in the FAQ section for Azure support. |
 | E310 | **c** | You can easily make use of Azure AI Services. The Microsoft documentation mentions the following. Azure AI Services are cloud-based services with REST APIs and client library SDKs available to help you build cognitive intelligence into your applications. You can add cognitive features to your applications without having artificial intelligence (... |
 | E311 | **b** | You can make use of Azure DevTest Labs for this requirement. The Microsoft documentation mentions the following. DevTest Labs provides the following capabilities to developers working with VMs: Create VMs quickly by following fewer than five simple steps. Choose from a curated list of VM bases configured, approved, and authorized by the team lea... |
 | E312 | **a** | Yes, this is possible with this service. The Microsoft documentation mentions the following. IoT Hub is a managed service hosted in the cloud that acts as a central message hub for communications in both directions between an IoT application and its attached devices. You can connect millions of devices and their backend solutions reliably and se... |
@@ -2830,7 +2830,7 @@
 
 | # | Answer | Explanation |
 |---|---|---|
-| E313 | **a** | Azure Cloud Shell needs the following to operate. A resource group A storage account A file share You will be prompted for these resources when you start Azure Cloud Shell. |
+| E313 | **a, b, c** | ⚠️ La domanda chiede 3 risposte: Cloud Shell richiede resource group, storage account e file share. Azure Cloud Shell needs the following to operate. A resource group A storage account A file share You will be prompted for these resources when you start Azure Cloud Shell. |
 | E314 | **b** | You can use the Azure Content Delivery Network for this purpose. The Microsoft documentation mentions the following. A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. CDNs store cached content on edge servers in point-ofpresence (POP) locations close to end users to minimize l... |
 | E315 | **b** | We can also utilize other Azure services with the Azure Free Account. We are not restricted to the Azure virtual machine or the Azure storage account service. |
 | E316 | **a** | Yes, all of the underlying resources get deleted if a resource group is deleted. |
@@ -2986,10 +2986,10 @@
 | E341 | **b** | The company should use Network Security Groups to fulfill this condition. With Network Security Groups, we can append inbound rules to limit the inbound traffic to virtual machines. The Microsoft Defender for Cloud service is adopted to strengthen the security posture of resources created as part of our Azure subscription. |
 | E342 | **b** | This requirement can be fulfilled by the use of Azure Policies. With Azure policies, we can apply an in-built policy to define the SKU size that can be used to launch an Azure virtual machine. As shown in the figure below, an inbuilt policy can already be utilized for this purpose. Option A is invalid because this is used to shield resources fro... |
 | E343 | **d** | Azure resource tags can be utilized to organize resources. We can then observe the billing aspect of the resources based on resource tags. Option B is invalid because this is used as a governance service for our resources. Option C is invalid because this is applied to orchestrate the deployment of resources. Option A is invalid because this is ... |
-| E344 | **c** | Azure Blueprints can be adopted to orchestrate the deployment of multiple resource templates and artifacts. Role Assignments Policy Assignments Azure Resource templates) Resource Groups Manager templates (ARM Option B is invalid because this is used as a governance service for our resources. Option D is invalid because this is adopted to organiz... |
+| E344 | **c** | ⚠️ Azure Blueprints è in fase di ritiro — sostituito da Template Specs + Deployment Stacks. Azure Blueprints can be adopted to orchestrate the deployment of multiple resource templates and artifacts. Role Assignments Policy Assignments Azure Resource templates) Resource Groups Manager templates (ARM Option B is invalid because this is used as a governance service for our resources. Option D is invalid because this is adopted to organiz... |
 | E345 | **d** | Azure Multi-Factor Authentication can be enabled in a couple of ways. This can be done from Microsoft Entra ID. As shown in the figure below, if we go to the Users section, we can enable Multi-Factor Authentication. The other options are invalid because we cannot enable Multi-Factor Authentication in the other services. |
-| E346 | **a** | Using the Total Cost of Ownership calculator, we can understand the TCO for server workloads. |
-| E347 | **a** | We can scroll down and then download the report in the Final Report section for the TCO Calculator. It is also shown in the figure below. |
+| E346 | **a** | ⚠️ TCO Calculator deprecato (agosto 2025) — ora si usa il Pricing Calculator anche per scenari di migrazione. Using the Total Cost of Ownership calculator, we can understand the TCO for server workloads. |
+| E347 | **a** | ⚠️ TCO Calculator deprecato (agosto 2025) — ora si usa il Pricing Calculator anche per scenari di migrazione. We can scroll down and then download the report in the Final Report section for the TCO Calculator. It is also shown in the figure below. |
 | E348 | **b** | For the logical grouping of resources, we use resource groups. For availability, we can deploy either across Availability sets or Availability zones. |
 | E349 | **b** | Subscriptions are applied more from a billing aspect for Azure resources. For availability, we can deploy either across Availability sets or Availability zones. |
 | E350 | **a** | Yes, this is the correct strategy. We can apply either Availability sets or zones to enhance the availability of our virtual machines. |
@@ -3163,7 +3163,7 @@
 | E366 | **d** | With the added benefit that the secondary copies stored in paired Azure regions are readable, RA-GRS replicates data with the same level of redundancy as normal GRS replication. In other words, you can use a variety of readable endpoints if your application is configured correctly. As a result, read operations now have a 99.99% SLA. Although a s... |
 | E367 | **c** | Storage capacity is provided in 50 GB for S6tandard and 10 GB for Basic. |
 | E368 | **b** | You can establish a secure connection to your virtual network from a single client computer using a Pointto-Site (P2S) VPN gateway connection. Start the P2S connection from the client's computer to establish it. Telecommuters who want to access Azure VNets from a distant place, such as their home or a conference, can take advantage of this optio... |
-| E369 | **b** | Based on identification signals, Microsoft Entra ID uses Conditional Access as a tool to provide (or restrict) access to resources. A more advanced form of MFA (multifactor authentication) is conditional access. After first-factor authentication is complete, conditional access rules are put into effect. In situations like Denial-ofService (DoS) ... |
+| E369 | **a** | ⚠️ Risposta corretta: **a** (Conditional Access), non b (Administrative Units). La spiegazione stessa conferma che Conditional Access è la funzionalità che concede/restringe l'accesso. Based on identification signals, Microsoft Entra ID uses Conditional Access as a tool to provide (or restrict) access to resources. A more advanced form of MFA (multifactor authentication) is conditional access. After first-factor authentication is complete, conditional access rules are put into effect. In situations like Denial-ofService (DoS) ... |
 | E370 | **d** | Public Cloud: Third-party cloud service providers use public clouds (like Microsoft Azure) that are owned and maintained by them to distribute their computing resources, such as servers and storage, over the Internet. The cloud provider manages all equipment, software, and other supporting infrastructure. Private Cloud: Cloud computing services ... |
 | E371 | **a** | Your on-premises network and an Azure virtual network are connected via a Site-to-Site VPN gateway connection using an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel. An on-site VPN device with a public IP address visible from the outside is necessary for this kind of connection. |
 | E372 | **d** | You can deploy apps and data to regional data centers worldwide due to geo-distribution, guaranteeing that your clients always have the greatest performance in their area. |
@@ -3349,11 +3349,11 @@
 | E394 | **c** | Your on-premises and cloud Windows servers are kept in bidirectional synchronization with Azure File Sync. |
 | E395 | **a** | Microsoft Entra ID employs Conditional Access as a mechanism to provide (or prohibit) access to resources in accordance with identification signals. If your sign-in signals are irregular or originate from an unexpected location, Conditional Access may request authentication factor from you. |
 | E396 | **d** | A security concept known as "Zero Trust" guards resources by preparing for the worst-case situation. |
-| E397 | **c** | All permissions assigned in the given roles are granted via role-based access control using an allowed model. |
+| E397 | **a** | ⚠️ Risposta corretta: **a** (Read and Write), non c (Read only). RBAC usa un modello additivo: i permessi di tutti i ruoli assegnati si sommano (Read ∪ Write = Read and Write). All permissions assigned in the given roles are granted via role-based access control using an allowed model. |
 | E398 | **a** | Azure policy enables you to define initiatives (groups of rules) and policies that forbid the creation of noncompliant resources. |
 | E399 | **b** | Artifacts might not have any additional parameters. For example, the "Deploy threat detection on SQL servers" policy needs no additional settings. |
 | E400 | **d** | You may expand your Azure compliance and monitoring to your hybrid and multi-cloud deployments using Azure Arc in conjunction with Azure Resource Manager. |
-| E401 | **c** | You can publish your resource as code using ARM Templates and Azure Blueprints, which automatically apply policies. Combining the two makes it easier to ensure you are deploying reliable legal resources. |
+| E401 | **c** | ⚠️ Azure Blueprints è in fase di ritiro — sostituito da Template Specs + Deployment Stacks. You can publish your resource as code using ARM Templates and Azure Blueprints, which automatically apply policies. Combining the two makes it easier to ensure you are deploying reliable legal resources. |
 | E402 | **a** | The five suggestion categories for Azure Advisor are cost, operational excellence, performance, security, and reliability. |
 | E403 | **c** | Resource Health is an accurate representation of your actual Azure resources. It gives details on the state of each of your particular cloud resources. |
 | E404 | **d** | Multiple steps are involved in migrating to Microsoft Azure Cloud Adoption Framework; these are: 1. Define Strategy 2. Plan 3. Ready 4. Adopt 5. Govern 6. Manage The strategy for the adoption should include the following: 1. Recognize motivations Learn about cloud economics and obtain the technical and financial advice you need to create your cl... |
@@ -3362,7 +3362,7 @@
 | E407 | **b** | The level of control you have over ensuring that the data and apps on your virtual machines are always accessible is increased by availability zones. Within an Azure region, an Availability Zone is a physically distinct zone. Each supported Azure region has three Availability Zones. Power, networking, and cooling are all unique to each Availabil... |
 | E408 | **c and e** | A container for Azure resources is called an Azure subscription. Additionally, it serves as a limit for billing and resource access permissions. All of the resources in a subscription are billed monthly. Multiple Azure subscriptions may be included in a single Azure tenant (Microsoft Entra ID). For an Azure solution, a resource group is a contai... |
 | E409 | **a and b** | You must set up a VPN (Virtual Private Network) to link the on-premises network to the Azure virtual network to deploy a solution that allows the client computers on your on-premises network to communicate with the Azure virtual machines. A virtual network gateway is the name of the Azure VPN device. The Azure virtual network must have a specifi... |
-| E410 | **c** | There are quotation limits on several Azure resources. The quota restrictions are there to aid you in keeping tabs on your Azure expenses. The default quota frequently needed to be increased, though. By submitting a support request, you can ask for an increase in the quota limit. Select "Service and subscription limits (quotas)" as the issue typ... |
+| E410 | **a** | ⚠️ Risposta corretta: **a** (Create a new support request), non c (service health alert). La spiegazione stessa dice "By submitting a support request". There are quotation limits on several Azure resources. The quota restrictions are there to aid you in keeping tabs on your Azure expenses. The default quota frequently needed to be increased, though. By submitting a support request, you can ask for an increase in the quota limit. Select "Service and subscription limits (quotas)" as the issue typ... |
 | E411 | **b** | Virtual networks are the name given to networks in Azure. A virtual network may contain numerous subnets and IP address spaces. Within a virtual network, Azure automatically manages traffic routing across several subnets. According to the query, FinServer has to be on a different network segment. Regarding networking, the only method to distingu... |
 | E412 | **d** | Microsoft's user-friendly cloud file system is called Azure Files. The use of Azure file sharing with Windows and Windows Server is straightforward. You must either mount an Azure file share, which entails giving it a drive letter, or mount a point path or access it via its UNC path to use it with Windows. Although this is a feature we are worki... |
 
@@ -3476,7 +3476,7 @@
 | E418 | **c** | Azure Policy supports organizational standards enforcement and at-scale compliance evaluation. With the ability to drill down to the per-resource and perpolicy granularity, it offers an aggregated view for assessing the overall condition of the environment compliance dashboard. |
 | E419 | **c** | Your on-premises network is linked to an Azure virtual network via an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel using a site-to-site VPN gateway connection. This kind of connection requires a VPN device that is on-site and has been given a public IP address visible from the outside. |
 | E420 | **b and e** | Run Docker containers as needed in a serverless, managed Azure environment. Azure Container Instances provides a solution for any situation that may run in separate containers without orchestration. Run eventdriven applications, carry out data processing, launch build jobs, and swiftly deploy from your container development pipelines. You can ma... |
-| E421 | **b** | Microsoft's PaaS product is called Azure Data Warehouse, which is currently called Azure Synapse Analytics. Like all Microsoft PaaS services, SQL Data Warehouse has a 99.9% SLA for availability. Because its platform includes high availability features, Microsoft can guarantee 99.9% availability. |
+| E421 | **a** | ⚠️ Risposta corretta: **a** (True), non b (False). La spiegazione stessa conferma che Azure SQL Data Warehouse (Synapse Analytics) ha funzionalità di HA con SLA 99.9%. Microsoft's PaaS product is called Azure Data Warehouse, which is currently called Azure Synapse Analytics. Like all Microsoft PaaS services, SQL Data Warehouse has a 99.9% SLA for availability. Because its platform includes high availability features, Microsoft can guarantee 99.9% availability. |
 | E422 | **a** | Azure When you need to integrate apps, data, systems, and services across businesses or organizations, Logic Apps is a cloud solution that can help you schedule, automate, and orchestrate tasks, business processes, and workflows. Whether in the cloud, on-premises, or both, Logic Apps makes it easier to design and develop scalable solutions for a... |
 | E423 | **d** | Users worldwide will download big video files, according to the query. If people could download the video from servers in their home area, the video playback experience would be better. By utilizing a content delivery network, we can do this. A dispersed network of servers known as a Content Delivery Network (CDN) can deliver web material to use... |
 | E424 | **c and e** | Data from millions of sensors is provided by IoT Hub (Internet of Things Hub). A managed service called IoT Hub is hosted in the cloud. It serves as a central messaging node for two-way communication between your IoT application and the devices it controls. Building IoT systems with dependable and secure connections between millions of IoT devic... |
@@ -3910,7 +3910,7 @@
 | F27 | **c** | Azure VMs = IaaS. You rent the hardware and manage the OS and above. |
 | F28 | **c** | App Service, SQL Database, and Cosmos DB are all PaaS — provider manages infrastructure, you manage app code and data. |
 | F29 | **c** | Hybrid cloud minimizes both CapEx (burst to public cloud instead of buying hardware) and OpEx (keep existing on-prem for baseline). Public cloud alone wouldn't minimize OpEx for the existing on-prem workload. |
-| F30 | **c** | Office 365 = SaaS (you use the app), Azure VMs = IaaS (you manage the OS), Event Grid = PaaS (serverless event routing). |
+| F30 | **c** | Office 365 = SaaS (you use the app), Azure VMs = IaaS (you manage the OS), Event Grid = **Serverless** (event routing, pay per event). Since Serverless is not listed as an option, PaaS is the closest standard classification. |
 | F31 | **b** | Azure MySQL Database is a managed database service = PaaS. Provider handles OS, patching, backups. |
 | F32 | **b** | Elasticity = automatically scale up/down based on demand. Scalability is the general ability to handle growth; elasticity is the automatic response to spikes. |
 | F33 | **b** | Moving to Azure = pay-as-you-go = OpEx (Operational Expenditure). On-prem hardware = CapEx. |
@@ -4178,7 +4178,7 @@
 | F84 | **b** | Microsoft Authenticator app supports OATH TOTP tokens as a second factor. It works with Entra ID and other identity providers. |
 | F85 | **b** | Microsoft Defender for Cloud provides a regulatory compliance dashboard that checks your Azure environment against industry standards (ISO, PCI DSS, SOC, etc.). |
 | F86 | **a** | Zero Trust's three principles: 1) Verify explicitly (always authenticate/authorize), 2) Use least privilege access (JIT/JEA), 3) Assume breach (minimize blast radius). |
-| F87 | **d** | Azure Blueprints bundle ARM templates, RBAC, policies, and resource groups into a reusable, versioned package for repeatable environment deployment. |
+| F87 | **d** | Azure Blueprints bundle ARM templates, RBAC, policies, and resource groups into a reusable, versioned package for repeatable environment deployment. ⚠️ Blueprints is being retired → replaced by Template Specs + Deployment Stacks. |
 | F88 | **a** | Yes. Entra ID Cloud Sync (or Entra Connect) synchronizes on-prem AD with Entra ID, enabling SSO and MFA across both environments. |
 | F89 | **c** | Security groups in Entra ID are used to group users and assign permissions to resources (including O365). Resource groups organize Azure resources; Management groups organize subscriptions. |
 | F90 | **b** | Authentication = verifying identity ("who are you?"). MFA adds extra verification factors. Authorization = "what can you do?" after identity is confirmed. |
@@ -5057,7 +5057,7 @@
 | I38 | **Azure Files** | Azure Files = SMB + NFS. Mountable as drive letter. Replace/supplement on-prem file servers. (PT3) |
 | I39 | **Patching the OS of virtual machines** | IaaS = customer manages from OS up. CSP handles physical infra, network, platform. (PT3) |
 | I40 | **Costs only during execution + Azure auto-adjusts capacity** | Serverless = no server management, auto-scaling, pay-per-execution. NOT dedicated hardware. NOT VM OS config. (PT3) |
-| I41 | **Azure Cost Management and Billing** | Cost Management = spending analysis, budgets, cost optimization. Advisor also recommends but Cost Management is the primary cost tool. (PT3) |
+| I41 | **⚠️ Azure Cost Management and Billing** | ⚠️ **Correction**: The question says "recommendations to optimize spending" which maps to **Azure Advisor** (Cost category), not Cost Management. Cost Management provides cost analysis, budgets, and alerts — Advisor provides **recommendations**. (PT3) |
 | I42 | **When you need additional VMs/compute to speed up your application** | Scale out = add more instances. Scale up = bigger instance. Scale out ≠ reduce cost or get stronger CPU. (PT3) |
 | I43 | **Hybrid** | Hybrid = keep regulated data on-prem + leverage cloud for less sensitive workloads. (PT3) |
 | I44 | **Azure Government** | Sovereign cloud. Federal/state/local/tribal governments + partners only. (PT3) |
@@ -5072,7 +5072,7 @@
 | I53 | **Cloud-based identity and access management service** | Not storage, not network security, not app deployment. (PT3) |
 | I54 | **Establish multiple layers of security controls to mitigate risks** | Not single layer. Not physical only. Not outsourcing. (PT3) |
 | I55 | **Near unlimited scalability with on-demand resources** | NOT: resources not shared (that's private). NOT: full customization (that's private). NOT: hardware shipped to you. (PT3) |
-| I56 | **Yes, but only by the subscription owner** | Multiple locks can coexist. Subscription owner/authorized users can add locks. (PT3) |
+| I56 | **Yes, but only by the subscription owner** | ⚠️ "Only subscription owner" is too narrow. Any user with **Owner or User Access Administrator** role can add locks. Multiple locks can coexist on a resource. (PT3) |
 | I57 | **Natively integrates with Azure services for monitoring and protection** | Built-in. No separate agent deployment needed for Azure-native services. (PT3) |
 | I58 | **Azure Storage Account** | Storage Account provides Azure Files. Tricky: Azure Files would be ideal but Storage Account is the best available option. (PT3) |
 | I59 | **Yes** | AZs = physically separate DCs within a region. 99.99% SLA across 2+ zones. (PT3) |
@@ -5424,7 +5424,7 @@
 | J62 | **Hybrid cloud** |  (PT4) |
 | J63 | **Azure Service Health** |  (PT4) |
 | J64 | **Azure Government** |  (PT4) |
-| J65 | **Policy assignments** |  (PT4) |
+| J65 | **Policy assignments** | ⚠️ Azure Blueprints is being retired → replaced by Template Specs + Deployment Stacks. (PT4) |
 | J66 | **Unlimited data storage** |  (PT4) |
 | J67 | **A Subscription** | Hierarchy: Tenant → Subscription → Resource Group → Resource. (PT4) |
 | J68 | **IaaS** |  (PT4) |
@@ -5441,7 +5441,7 @@
 | J79 | **Azure Resource Manager** |  (PT4) |
 | J80 | **Azure Blob Storage** |  (PT4) |
 | J81 | **Virtual Network Peering** |  (PT4) |
-| J82 | **Yes, subscription owner can** |  (PT4) |
+| J82 | **Yes, subscription owner can** | ⚠️ Not limited to subscription owner — any user with **Owner or User Access Administrator** role can add locks. (PT4) |
 | J83 | **Resource usage** |  (PT4) |
 | J84 | **Zone Redundant Storage (ZRS)** |  (PT4) |
 | J85 | **Yes** |  (PT4) |
@@ -5455,7 +5455,7 @@
 | J93 | **Resource Groups** |  (PT4) |
 | J94 | **Full support for both Azure CLI and PowerShell** |  (PT4) |
 | J95 | **50** |  (PT4) |
-| J96 | **Preserves relationship between definition and assignment** |  (PT4) |
+| J96 | **Preserves relationship between definition and assignment** | ⚠️ Azure Blueprints is being retired → replaced by Template Specs + Deployment Stacks. (PT4) |
 | J97 | **Budget alerts** |  (PT4) |
 | J98 | **Network Security Group (NSG)** |  (PT4) |
 | J99 | **PaaS** |  (PT4) |
@@ -5479,7 +5479,7 @@
 | J117 | **Pricing, TCO** | ⚠️ TCO deprecated August 2025. (PT4) |
 | J118 | **Yes** |  (PT4) |
 | J119 | **Elasticity** |  (PT4) |
-| J120 | **Prevent modifications but allow read access** |  (PT4) |
+| J120 | **Prevent modifications but allow read access** | ⚠️ This describes only the **ReadOnly** lock. There are TWO lock types: **Delete** (read+modify OK, no delete) and **ReadOnly** (read only, no modify or delete). (PT4) |
 | J121 | **All of the above** |  (PT4) |
 | J122 | **Initiatives** |  (PT4) |
 | J123 | **Horizontal adjusts number of resources; vertical adjusts capabilities** |  (PT4) |
@@ -5727,7 +5727,7 @@
 | K50 | **High availability + Scalability** |  (PT5) |
 | K51 | **Availability Zones** |  (PT5) |
 | K52 | **Azure Monitor** |  (PT5) |
-| K53 | **Site-to-Site (IPsec)** |  (PT5) |
+| K53 | **⚠️ Site-to-Site (IPsec)** | ⚠️ **Correction**: VPN between two Azure VNets is a **Network-to-Network (VNet-to-VNet)** connection, not Site-to-Site. Site-to-Site is for on-premises → Azure. For Azure-to-Azure, **VNet Peering** is simpler and preferred. (PT5) |
 | K54 | **Lift-and-shift migration** |  (PT5) |
 | K55 | **Agility** |  (PT5) |
 | K56 | **No** |  (PT5) |
@@ -6235,7 +6235,7 @@
 | M9 | **True** |  (PT7) |
 | M10 | **Azure File Sync** |  (PT7) |
 | M11 | **Rehydrate it** |  (PT7) |
-| M12 | **Extending Azure Policy and Blueprints to on-prem + multi-cloud** |  (PT7) |
+| M12 | **Extending Azure Policy and Blueprints to on-prem + multi-cloud** | ⚠️ Blueprints is being retired. Arc primarily extends Azure Policy, RBAC, and tags — not Blueprints. (PT7) |
 | M13 | **Operational (OpEx)** |  (PT7) |
 | M14 | **VM size** |  (PT7) |
 | M15 | **Azure TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT7) |
@@ -6263,7 +6263,7 @@
 | M37 | **Containers** |  (PT7) |
 | M38 | **Subscription** |  (PT7) |
 | M39 | **Data ingress within same AZ** | Billing factors: region, account type, access tier, capacity, redundancy, transactions, data egress. (PT7) |
-| M40 | **Host app, manage OS, don't manage underlying hardware** |  (PT7) |
+| M40 | **Host app, manage OS, don't manage underlying hardware** | ⚠️ Ambiguous wording: in PaaS the **provider** manages the OS, not you. You manage app code + data only. (PT7) |
 | M41 | **Fault tolerance** |  (PT7) |
 | M42 | **Intra-region** |  (PT7) |
 | M43 | **Deploy web app, focus only on coding** |  (PT7) |
@@ -6306,7 +6306,7 @@
 | M80 | **False** | B2C = customer-facing. B2B = partner collaboration. (PT7) |
 | M81 | **High availability** |  (PT7) |
 | M82 | **Elasticity** |  (PT7) |
-| M83 | **Entra B2C** |  (PT7) |
+| M83 | **⚠️ Entra B2C** | ⚠️ **Correction**: B2C is for consumer-facing apps (social logins), NOT for corporate credentials. Using existing corporate credentials for cloud apps is the core function of **Microsoft Entra ID (SSO)**, or **Entra B2B** for partner organizations. (PT7) |
 | M84 | **Yes** |  (PT7) |
 | M85 | **AzCopy** |  (PT7) |
 | M86 | **Private, Public** |  (PT7) |
@@ -6528,15 +6528,15 @@
 | N32 | **Azure Kubernetes (AKS)** |  (PT8) |
 | N33 | **Extend Azure data services to on-prem + multi-cloud** |  (PT8) |
 | N34 | **True** |  (PT8) |
-| N35 | **GRS** |  (PT8) |
+| N35 | **GRS** | GRS and GZRS both have 16 nines of durability. GZRS is the highest redundancy option (adds zone protection on primary). (PT8) |
 | N36 | **Yes** |  (PT8) |
 | N37 | **No** |  (PT8) |
 | N38 | **Containers** |  (PT8) |
 | N39 | **No (OpEx)** |  (PT8) |
 | N40 | **Azure Migrate** |  (PT8) |
 | N41 | **Public cloud** |  (PT8) |
-| N42 | **Host app + manage OS, don't manage hardware** |  (PT8) |
-| N43 | **Blueprints** |  (PT8) |
+| N42 | **Host app + manage OS, don't manage hardware** | ⚠️ Ambiguous wording: in PaaS the **provider** manages the OS, not you. You manage app code + data only. (PT8) |
+| N43 | **Blueprints** | ⚠️ Azure Blueprints is being retired → replaced by Template Specs + Deployment Stacks. (PT8) |
 | N44 | **Fault tolerance** |  (PT8) |
 | N45 | **Azure TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT8) |
 | N46 | **Deploy web app, focus on coding** |  (PT8) |
@@ -6556,7 +6556,7 @@
 | N60 | **Create a Storage Account** |  (PT8) |
 | N61 | **Unified solution to manage/govern data across cloud + on-prem** |  (PT8) |
 | N62 | **Containers** |  (PT8) |
-| N63 | **No (CapEx — upfront payment)** |  (PT8) |
+| N63 | **⚠️ No (CapEx — upfront payment)** | ⚠️ **Correction**: Cloud reservations are **OpEx**, not CapEx. CapEx = upfront spending on **physical infrastructure** you own. Reservations are a commitment to pay for cloud services — no physical asset is purchased. Microsoft classifies all cloud spending (including reservations) as OpEx. (PT8) |
 | N64 | **Desired state of resources + configuration** |  (PT8) |
 | N65 | **Private, Hybrid** |  (PT8) |
 | N66 | **Resources** |  (PT8) |
