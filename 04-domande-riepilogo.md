@@ -2465,7 +2465,7 @@
 
 **E283.** A company wants to have a service that could fulfil the below requirement. “Provide the ability to generate keys in hardware security modules that never leave the hardware security module boundary.” Which of the following services could be used for this requirement?
 - a) Microsoft Defender for Cloud
-- b) Azure Key vault
+- b) Azure Key Vault
 - c) Azure Network Security Groups
 - d) Azure Advisor
 
@@ -5361,50 +5361,50 @@
 | # | Answer | Explanation |
 |---|---|---|
 | J1 | **IaaS** | VMs = virtualized compute. You manage OS and apps. IaaS = renting infrastructure. (PT4) |
-| J2 | **AzCopy** | VMs = virtualized compute. You manage OS and apps. IaaS = renting infrastructure. (PT4) |
+| J2 | **AzCopy** |  (PT4) |
 | J3 | **Region Pair** |  (PT4) |
-| J4 | **Yes** |  (PT4) |
+| J4 | **Yes** | Location = where metadata is stored. Resources inside can be in any region. (PT4) |
 | J5 | **Data and Identities** | Regardless of IaaS/PaaS/SaaS, customer always owns data and identities. (PT4) |
-| J6 | **Yes** | Budgets = set limits + alert notifications. NOT: auto-increase, suspend usage, or generate invoices. (PT4) |
+| J6 | **Yes** |  (PT4) |
 | J7 | **Azure Container Registry** |  (PT4) |
 | J8 | **IaaS** | IaaS = customer manages OS, apps, data, network config. SaaS = least. PaaS = middle. (PT4) |
-| J9 | **Dedicated intrusion detection system (IDS)** |  (PT4) |
+| J9 | **Dedicated intrusion detection system (IDS)** | Defense-in-depth = multiple layers. IDS monitors network for suspicious activity. (PT4) |
 | J10 | **Azure Service Health** |  (PT4) |
 | J11 | **Include multiple values for a single tag name** |  (PT4) |
-| J12 | **Azure Arc** | B2B + B2C capabilities for managing outside users (customers, partners). (PT4) |
+| J12 | **Azure Arc** |  (PT4) |
 | J13 | **Azure Service Health** |  (PT4) |
-| J14 | **Budgets** |  (PT4) |
+| J14 | **Budgets** | Budgets = set limits + alert notifications. NOT: auto-increase, suspend usage, or generate invoices. (PT4) |
 | J15 | **Private cloud for financial institution** | Hospital needing full control over patient data → private/hybrid, not public. (PT4) |
 | J16 | **No (True)** | Must apply individually or use Azure Policy for auto-tagging. (PT4) |
 | J17 | **Fault Tolerance** | Redundancy, failover, backups = keep running when components fail. (PT4) |
-| J18 | **External Identities** |  (PT4) |
-| J19 | **21Vianet** | Azure DNS hosts domains, doesn't sell them. Buy from App Service domains or third-party registrar. (PT4) |
+| J18 | **External Identities** | B2B + B2C capabilities for managing outside users (customers, partners). (PT4) |
+| J19 | **21Vianet** |  (PT4) |
 | J20 | **No** | On-prem = direct physical control. Cloud = trust the provider for physical security. (PT4) |
-| J21 | **Pay only for resources actually consumed** | Question doesn't specify cross-zone/cross-DC config. VMSS alone doesn't guarantee DC fault tolerance without explicit AZ configuration. (PT4) |
+| J21 | **Pay only for resources actually consumed** |  (PT4) |
 | J22 | **Azure ExpressRoute** |  (PT4) |
 | J23 | **Pay-as-you-go** |  (PT4) |
 | J24 | **AKS + Azure Functions** |  (PT4) |
-| J25 | **Prevent accidental deletion or modification** | PowerAutomate ≠ PowerShell. PowerAutomate isn't an Azure deployment tool. (PT4) |
+| J25 | **Prevent accidental deletion or modification** |  (PT4) |
 | J26 | **Azure Container Instances** |  (PT4) |
 | J27 | **Azure App Service, Azure SQL, Azure Storage** |  (PT4) |
-| J28 | **No** |  (PT4) |
+| J28 | **No** | PowerAutomate ≠ PowerShell. PowerAutomate isn't an Azure deployment tool. (PT4) |
 | J29 | **Azure DNS** |  (PT4) |
 | J30 | **Yes** |  (PT4) |
-| J31 | **No** |  (PT4) |
-| J32 | **No** |  (PT4) |
-| J33 | **Securing VMs and access to them** | ExpressRoute = dedicated private connection. NOT public internet. (PT4) |
-| J34 | **Clearly defines roles of CSP and customer in security** | Defense-in-depth = multiple layers. IDS monitors network for suspicious activity. (PT4) |
-| J35 | **Purview** | Service Health notifies and advises. Cannot prevent service failures. (PT4) |
+| J31 | **No** | Azure DNS hosts domains, doesn't sell them. Buy from App Service domains or third-party registrar. (PT4) |
+| J32 | **No** | Question doesn't specify cross-zone/cross-DC config. VMSS alone doesn't guarantee DC fault tolerance without explicit AZ configuration. (PT4) |
+| J33 | **Securing VMs and access to them** |  (PT4) |
+| J34 | **Clearly defines roles of CSP and customer in security** |  (PT4) |
+| J35 | **Purview** |  (PT4) |
 | J36 | **PaaS** |  (PT4) |
 | J37 | **Azure Storage Explorer** |  (PT4) |
 | J38 | **PaaS** |  (PT4) |
 | J39 | **Virtual Network Peering** |  (PT4) |
 | J40 | **PaaS, SaaS** |  (PT4) |
 | J41 | **Management Groups with Resource Groups by business unit** |  (PT4) |
-| J42 | **No** |  (PT4) |
+| J42 | **No** | ExpressRoute = dedicated private connection. NOT public internet. (PT4) |
 | J43 | **Authentication** |  (PT4) |
 | J44 | **PowerShell; Bash** |  (PT4) |
-| J45 | **Ensure secure configurations of workloads and resources** | Location = where metadata is stored. Resources inside can be in any region. (PT4) |
+| J45 | **Ensure secure configurations of workloads and resources** |  (PT4) |
 | J46 | **Scalability** |  (PT4) |
 | J47 | **SAML** |  (PT4) |
 | J48 | **Yes** |  (PT4) |
@@ -5412,23 +5412,23 @@
 | J50 | **Azure Functions** |  (PT4) |
 | J51 | **Log Analytics** |  (PT4) |
 | J52 | **No** |  (PT4) |
-| J53 | **No** |  (PT4) |
+| J53 | **No** | Service Health notifies and advises. Cannot prevent service failures. (PT4) |
 | J54 | **No** | Resources can connect to resources in other RGs. (PT4) |
 | J55 | **Azure Files** |  (PT4) |
-| J56 | **Yes** | NOT: auto-increase, suspend usage, or send invoice. (PT4) |
+| J56 | **Yes** |  (PT4) |
 | J57 | **Availability Zone** |  (PT4) |
 | J58 | **Costs only during execution** |  (PT4) |
-| J59 | **Budget alert is triggered** |  (PT4) |
+| J59 | **Budget alert is triggered** | NOT: auto-increase, suspend usage, or send invoice. (PT4) |
 | J60 | **When you need additional VMs/compute** |  (PT4) |
-| J61 | **CanNotDelete Lock** | Hierarchy: Tenant → Subscription → Resource Group → Resource. (PT4) |
+| J61 | **CanNotDelete Lock** |  (PT4) |
 | J62 | **Hybrid cloud** |  (PT4) |
 | J63 | **Azure Service Health** |  (PT4) |
 | J64 | **Azure Government** |  (PT4) |
 | J65 | **Policy assignments** |  (PT4) |
 | J66 | **Unlimited data storage** |  (PT4) |
-| J67 | **A Subscription** |  (PT4) |
+| J67 | **A Subscription** | Hierarchy: Tenant → Subscription → Resource Group → Resource. (PT4) |
 | J68 | **IaaS** |  (PT4) |
-| J69 | **Azure Activity Log** | ⚠️ Note: TCO Calculator deprecated August 2025. Current answer: Pricing Calculator. (PT4) |
+| J69 | **Azure Activity Log** |  (PT4) |
 | J70 | **Public** |  (PT4) |
 | J71 | **Virtual Network Peering** |  (PT4) |
 | J72 | **Azure File Sync** |  (PT4) |
@@ -5445,7 +5445,7 @@
 | J83 | **Resource usage** |  (PT4) |
 | J84 | **Zone Redundant Storage (ZRS)** |  (PT4) |
 | J85 | **Yes** |  (PT4) |
-| J86 | **TCO Calculator** |  (PT4) |
+| J86 | **TCO Calculator** | ⚠️ Note: TCO Calculator deprecated August 2025. Current answer: Pricing Calculator. (PT4) |
 | J87 | **Yes** |  (PT4) |
 | J88 | **Yes** |  (PT4) |
 | J89 | **Customer applies OS updates** |  (PT4) |
@@ -5459,7 +5459,7 @@
 | J97 | **Budget alerts** |  (PT4) |
 | J98 | **Network Security Group (NSG)** |  (PT4) |
 | J99 | **PaaS** |  (PT4) |
-| J100 | **ARM templates** | ⚠️ TCO deprecated August 2025. (PT4) |
+| J100 | **ARM templates** |  (PT4) |
 | J101 | **No** |  (PT4) |
 | J102 | **Microsoft Entra Domain Services** |  (PT4) |
 | J103 | **Private endpoint for DB + private IP for VM** |  (PT4) |
@@ -5476,7 +5476,7 @@
 | J114 | **Metered pricing** |  (PT4) |
 | J115 | **Yes** |  (PT4) |
 | J116 | **Azure Cosmos DB** |  (PT4) |
-| J117 | **Pricing, TCO** |  (PT4) |
+| J117 | **Pricing, TCO** | ⚠️ TCO deprecated August 2025. (PT4) |
 | J118 | **Yes** |  (PT4) |
 | J119 | **Elasticity** |  (PT4) |
 | J120 | **Prevent modifications but allow read access** |  (PT4) |
@@ -5679,91 +5679,91 @@
 | K2 | **Azure Monitor** |  (PT5) |
 | K3 | **No** | SaaS = least control. Users interact with the app only. No OS access. (PT5) |
 | K4 | **No** | RGs are logical containers, not physical redundancy. Use AZs or regions. (PT5) |
-| K5 | **Data accessible even if a zone becomes unavailable** | NOT: Deep Sleep. NOT: Infrequently Accessed. (PT5) |
+| K5 | **Data accessible even if a zone becomes unavailable** |  (PT5) |
 | K6 | **LRS + ZRS** |  (PT5) |
 | K7 | **When protection from regional disasters is required** |  (PT5) |
-| K8 | **Hot** |  (PT5) |
+| K8 | **Hot** | NOT: Deep Sleep. NOT: Infrequently Accessed. (PT5) |
 | K9 | **Budgets** |  (PT5) |
 | K10 | **PaaS** | PaaS = managed platform. Provider handles OS, middleware, patching. (PT5) |
 | K11 | **Load balancing VMs** | Load balancing = performance optimization, not cost saving. (PT5) |
-| K12 | **All: # VMs, data amount, VM types, network bandwidth** | CanNotDelete = prevents deletion only. ReadOnly = prevents both deletion AND modification. (PT5) |
+| K12 | **All: # VMs, data amount, VM types, network bandwidth** |  (PT5) |
 | K13 | **No** | On-prem = direct physical control. Cloud = trust the provider. (PT5) |
-| K14 | **Azure ExpressRoute** | NOT: Queue Storage (message queuing, not data storage). (PT5) |
+| K14 | **Azure ExpressRoute** |  (PT5) |
 | K15 | **Azure Resource Manager (ARM)** |  (PT5) |
 | K16 | **Yes** | $200 credit valid for 30 days. (PT5) |
-| K17 | **ReadOnly lock** |  (PT5) |
+| K17 | **ReadOnly lock** | CanNotDelete = prevents deletion only. ReadOnly = prevents both deletion AND modification. (PT5) |
 | K18 | **Credit for 30 days** | NOT: unlimited access to all services. (PT5) |
 | K19 | **Azure VPN Gateway** |  (PT5) |
 | K20 | **PaaS** | PaaS reduces admin overhead. Agility = faster development cycles. (PT5) |
-| K21 | **Estimate cost of provisioning resources** | NOT: subscription type. (PT5) |
+| K21 | **Estimate cost of provisioning resources** |  (PT5) |
 | K22 | **Azure Network Watcher** |  (PT5) |
 | K23 | **IaaS** | IaaS = max control + customization. Avoid physical server procurement delays. (PT5) |
 | K24 | **Data egress** |  (PT5) |
 | K25 | **False** | One subscription = one trusted Entra directory. Multiple subscriptions CAN trust the same directory. (PT5) |
 | K26 | **Yes** |  (PT5) |
 | K27 | **Sovereign** | Azure Government (US), Azure China (21Vianet), Azure Germany. (PT5) |
-| K28 | **Yes** | Tags organize resources but don't incur costs or affect pricing. (PT5) |
+| K28 | **Yes** |  (PT5) |
 | K29 | **No** |  (PT5) |
 | K30 | **Azure Virtual Machine** | Event Hubs, Machine Learning, HDInsight = PaaS. (PT5) |
 | K31 | **Azure Cost Analysis** |  (PT5) |
 | K32 | **Resource locks** |  (PT5) |
 | K33 | **Azure Service Health — Yes** |  (PT5) |
 | K34 | **Azure Policy** |  (PT5) |
-| K35 | **Tags** |  (PT5) |
+| K35 | **Tags** | Tags organize resources but don't incur costs or affect pricing. (PT5) |
 | K36 | **TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT5) |
-| K37 | **Tags** | Defender detects security threats (malware, unauthorized access), NOT datacenter outages. (PT5) |
+| K37 | **Tags** |  (PT5) |
 | K38 | **Portal** |  (PT5) |
 | K39 | **Azure Arc** |  (PT5) |
 | K40 | **Azure Virtual Network** |  (PT5) |
-| K41 | **No** |  (PT5) |
+| K41 | **No** | Defender detects security threats (malware, unauthorized access), NOT datacenter outages. (PT5) |
 | K42 | **Entra B2B** |  (PT5) |
 | K43 | **IaaS** | Shared responsibility: provider = physical infra + virtualization. Customer = app code + data. (PT5) |
 | K44 | **Yes** |  (PT5) |
-| K45 | **Private cloud** | CapEx → OpEx shift. (PT5) |
+| K45 | **Private cloud** |  (PT5) |
 | K46 | **Current infrastructure config** | NOT: subscription type. (PT5) |
-| K47 | **Azure Portal** | Tags = organizational metadata only. Don't affect resource behavior or costs. (PT5) |
-| K48 | **Blob Storage** |  (PT5) |
-| K49 | **No** |  (PT5) |
+| K47 | **Azure Portal** |  (PT5) |
+| K48 | **Blob Storage** | NOT: Queue Storage (message queuing, not data storage). (PT5) |
+| K49 | **No** | Tags = organizational metadata only. Don't affect resource behavior or costs. (PT5) |
 | K50 | **High availability + Scalability** |  (PT5) |
-| K51 | **Availability Zones** | Device-based Conditional Access policies. (PT5) |
-| K52 | **Azure Monitor** | Delete lock blocks the entire RG deletion. No partial deletion. (PT5) |
+| K51 | **Availability Zones** |  (PT5) |
+| K52 | **Azure Monitor** |  (PT5) |
 | K53 | **Site-to-Site (IPsec)** |  (PT5) |
 | K54 | **Lift-and-shift migration** |  (PT5) |
 | K55 | **Agility** |  (PT5) |
 | K56 | **No** |  (PT5) |
 | K57 | **Deploy to subnet + restrict with NSG** |  (PT5) |
 | K58 | **Tags** |  (PT5) |
-| K59 | **No** |  (PT5) |
+| K59 | **No** | Delete lock blocks the entire RG deletion. No partial deletion. (PT5) |
 | K60 | **Elasticity** |  (PT5) |
-| K61 | **Azure Policy** | ⚠️ TCO deprecated August 2025. (PT5) |
+| K61 | **Azure Policy** |  (PT5) |
 | K62 | **Azure Policy** |  (PT5) |
-| K63 | **True** |  (PT5) |
-| K64 | **Availability Zones** | Budgets = set limits + alert notifications. NOT auto-increase, NOT suspend resources, NOT send invoices. (PT5) |
+| K63 | **True** | Device-based Conditional Access policies. (PT5) |
+| K64 | **Availability Zones** |  (PT5) |
 | K65 | **Availability Zones** |  (PT5) |
-| K66 | **Capital expenditure avoidance** |  (PT5) |
+| K66 | **Capital expenditure avoidance** | CapEx → OpEx shift. (PT5) |
 | K67 | **SSO** |  (PT5) |
 | K68 | **No** |  (PT5) |
 | K69 | **Yes** |  (PT5) |
-| K70 | **Large provider offers lower per-unit costs serving millions** | PaaS can scale up/out dynamically without re-deployment. (PT5) |
+| K70 | **Large provider offers lower per-unit costs serving millions** |  (PT5) |
 | K71 | **Entra ID** |  (PT5) |
 | K72 | **Yes** |  (PT5) |
 | K73 | **Yes** |  (PT5) |
 | K74 | **Hybrid cloud** |  (PT5) |
 | K75 | **Microsoft Purview** |  (PT5) |
-| K76 | **Yes** |  (PT5) |
+| K76 | **Yes** | ⚠️ TCO deprecated August 2025. (PT5) |
 | K77 | **No** | Budgets send alerts only. Do NOT stop/pause resources. Need Azure Automation for that. (PT5) |
-| K78 | **False** |  (PT5) |
+| K78 | **False** | PaaS can scale up/out dynamically without re-deployment. (PT5) |
 | K79 | **SSO + MFA + Passwordless** |  (PT5) |
-| K80 | **Reserved = consistent workloads; consumption = variable demand** | = Community cloud characteristics. NOT: broadest public accessibility. NOT: necessarily third-party managed. (PT5) |
-| K81 | **Resources shared among specific group** |  (PT5) |
-| K82 | **Geography** | Resources deactivated, not immediately deleted. Waiting period before permanent deletion. (PT5) |
+| K80 | **Reserved = consistent workloads; consumption = variable demand** |  (PT5) |
+| K81 | **Resources shared among specific group** | = Community cloud characteristics. NOT: broadest public accessibility. NOT: necessarily third-party managed. (PT5) |
+| K82 | **Geography** |  (PT5) |
 | K83 | **Entra Conditional Access** |  (PT5) |
-| K84 | **Elasticity** | NOT: customer manages OS. NOT: dedicated VMs per function. (PT5) |
-| K85 | **No** |  (PT5) |
+| K84 | **Elasticity** |  (PT5) |
+| K85 | **No** | Resources deactivated, not immediately deleted. Waiting period before permanent deletion. (PT5) |
 | K86 | **Log Analytics** |  (PT5) |
 | K87 | **Yes** |  (PT5) |
 | K88 | **High availability and durability in face of failures** |  (PT5) |
-| K89 | **Provider auto-scales based on events** |  (PT5) |
+| K89 | **Provider auto-scales based on events** | NOT: customer manages OS. NOT: dedicated VMs per function. (PT5) |
 | K90 | **Datacenters** |  (PT5) |
 ---
 
@@ -5959,7 +5959,7 @@
 | L4 | **Yes** |  (PT6) |
 | L5 | **All: Windows/Linux servers, Kubernetes clusters, VMs** |  (PT6) |
 | L6 | **ARM Templates** |  (PT6) |
-| L7 | **Private cloud** | Public cloud = shared infrastructure among tenants. (PT6) |
+| L7 | **Private cloud** |  (PT6) |
 | L8 | **PaaS** |  (PT6) |
 | L9 | **Azure Cost Management** |  (PT6) |
 | L10 | **Enforce access control rules on inbound/outbound traffic** |  (PT6) |
@@ -5971,9 +5971,9 @@
 | L16 | **Defense in Depth** |  (PT6) |
 | L17 | **Azure Initiative** |  (PT6) |
 | L18 | **Zero Trust** |  (PT6) |
-| L19 | **No** |  (PT6) |
+| L19 | **No** | PowerAutomate ≠ PowerShell. Not an Azure deployment tool. (PT6) |
 | L20 | **IaaS** |  (PT6) |
-| L21 | **Rehydrate it** | Zero Trust = never trust, always verify — regardless of location. (PT6) |
+| L21 | **Rehydrate it** |  (PT6) |
 | L22 | **Azure Service Health** |  (PT6) |
 | L23 | **Conditional Access** |  (PT6) |
 | L24 | **Consumption-based for unpredictable + Reserved Instances for long-term predictable** |  (PT6) |
@@ -5983,11 +5983,11 @@
 | L28 | **ARM templates** |  (PT6) |
 | L29 | **Azure Cost Management + Billing** |  (PT6) |
 | L30 | **Eliminates need to install CLI locally** |  (PT6) |
-| L31 | **No** |  (PT6) |
-| L32 | **No** |  (PT6) |
-| L33 | **Azure App Service** | Can move between MGs, but CANNOT merge subscriptions. (PT6) |
+| L31 | **No** | Zero Trust = never trust, always verify — regardless of location. (PT6) |
+| L32 | **No** | Public cloud = shared infrastructure among tenants. (PT6) |
+| L33 | **Azure App Service** |  (PT6) |
 | L34 | **Microsoft Defender for Cloud** |  (PT6) |
-| L35 | **Serverless with consumption pricing** | PowerAutomate ≠ PowerShell. Not an Azure deployment tool. (PT6) |
+| L35 | **Serverless with consumption pricing** |  (PT6) |
 | L36 | **Centralized billing and cost management** |  (PT6) |
 | L37 | **Infrastructure recreated rather than modified in place** |  (PT6) |
 | L38 | **Azure Migrate** |  (PT6) |
@@ -6006,29 +6006,29 @@
 | L51 | **Azure Queue Storage** |  (PT6) |
 | L52 | **Sovereign Region** |  (PT6) |
 | L53 | **Yes** |  (PT6) |
-| L54 | **No** |  (PT6) |
+| L54 | **No** | Can move between MGs, but CANNOT merge subscriptions. (PT6) |
 | L55 | **Elasticity** |  (PT6) |
-| L56 | **Prevent accidental deletion of critical storage account** | That's Application Insights / Azure Monitor, not Service Health. (PT6) |
+| L56 | **Prevent accidental deletion of critical storage account** |  (PT6) |
 | L57 | **CanNotDelete lock** |  (PT6) |
 | L58 | **Management Groups** |  (PT6) |
 | L59 | **Azure Management Groups** |  (PT6) |
 | L60 | **VMSS** |  (PT6) |
 | L61 | **Imperative** |  (PT6) |
 | L62 | **Cross-region replication** |  (PT6) |
-| L63 | **Tracks and resolves performance issues for applications** |  (PT6) |
+| L63 | **Tracks and resolves performance issues for applications** | That's Application Insights / Azure Monitor, not Service Health. (PT6) |
 | L64 | **Physical security of data centers** |  (PT6) |
-| L65 | **Granting external vendors access to shared project workspace** | Locks don't block subscription cancellation. Azure deactivates resources instead. (PT6) |
+| L65 | **Granting external vendors access to shared project workspace** |  (PT6) |
 | L66 | **Operational (OpEx)** |  (PT6) |
 | L67 | **Private endpoint** |  (PT6) |
 | L68 | **IaaS** |  (PT6) |
 | L69 | **Alert rule** |  (PT6) |
 | L70 | **Azure Monitor** |  (PT6) |
-| L71 | **False** |  (PT6) |
+| L71 | **False** | Locks don't block subscription cancellation. Azure deactivates resources instead. (PT6) |
 | L72 | **Vertical scaling** |  (PT6) |
 | L73 | **All: Storage, Key Vault, App Service, SQL Database** |  (PT6) |
 | L74 | **Reserved = consistent workloads; consumption = variable demand** |  (PT6) |
 | L75 | **Microsoft Defender for Cloud** |  (PT6) |
-| L76 | **Azure Purview** | ARM enables RBAC at resource group level for collective permission assignment. (PT6) |
+| L76 | **Azure Purview** |  (PT6) |
 | L77 | **SAML** |  (PT6) |
 | L78 | **PaaS** |  (PT6) |
 | L79 | **Azure ExpressRoute** |  (PT6) |
@@ -6038,7 +6038,7 @@
 | L83 | **Declarative** |  (PT6) |
 | L84 | **Azure Functions with serverless compute** |  (PT6) |
 | L85 | **Azure Data Box** |  (PT6) |
-| L86 | **Azure Resource Manager** |  (PT6) |
+| L86 | **Azure Resource Manager** | ARM enables RBAC at resource group level for collective permission assignment. (PT6) |
 | L87 | **Azure Site Recovery** |  (PT6) |
 | L88 | **Bicep** |  (PT6) |
 | L89 | **Azure Pricing Calculator** |  (PT6) |
@@ -6227,29 +6227,29 @@
 | M1 | **Assign permissions to roles, not individual users** |  (PT7) |
 | M2 | **Cool tier** |  (PT7) |
 | M3 | **Virtual network peering** |  (PT7) |
-| M4 | **No** |  (PT7) |
+| M4 | **No** | Azure doesn't charge for local/resource disk storage. (PT7) |
 | M5 | **Consistent and repeatable deployments** |  (PT7) |
-| M6 | **Azure B2C** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT7) |
+| M6 | **Azure B2C** |  (PT7) |
 | M7 | **Yes** |  (PT7) |
-| M8 | **Private cloud** | Functions = pay-per-execution, NOT flat fee. (PT7) |
+| M8 | **Private cloud** |  (PT7) |
 | M9 | **True** |  (PT7) |
 | M10 | **Azure File Sync** |  (PT7) |
 | M11 | **Rehydrate it** |  (PT7) |
 | M12 | **Extending Azure Policy and Blueprints to on-prem + multi-cloud** |  (PT7) |
 | M13 | **Operational (OpEx)** |  (PT7) |
 | M14 | **VM size** |  (PT7) |
-| M15 | **Azure TCO Calculator** |  (PT7) |
+| M15 | **Azure TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT7) |
 | M16 | **Customer, Customer, Microsoft** |  (PT7) |
 | M17 | **Enables version control and automated provisioning** |  (PT7) |
-| M18 | **Defense in Depth** | Valid: Point-to-Site VPN, Site-to-Site VPN, ExpressRoute. NVAs filter traffic, don't connect to Azure. (PT7) |
+| M18 | **Defense in Depth** |  (PT7) |
 | M19 | **Azure Initiative** |  (PT7) |
 | M20 | **Zero Trust** |  (PT7) |
 | M21 | **No** |  (PT7) |
-| M22 | **False** |  (PT7) |
+| M22 | **False** | Functions = pay-per-execution, NOT flat fee. (PT7) |
 | M23 | **Edge** |  (PT7) |
 | M24 | **Customizable user experiences for sign-up/sign-in** |  (PT7) |
 | M25 | **Entra ID** |  (PT7) |
-| M26 | **Consumption-based + Reserved Instances** | Billing factors: region, account type, access tier, capacity, redundancy, transactions, data egress. (PT7) |
+| M26 | **Consumption-based + Reserved Instances** |  (PT7) |
 | M27 | **No** |  (PT7) |
 | M28 | **Database management** |  (PT7) |
 | M29 | **Reserved pricing** |  (PT7) |
@@ -6262,8 +6262,8 @@
 | M36 | **Azure ExpressRoute** |  (PT7) |
 | M37 | **Containers** |  (PT7) |
 | M38 | **Subscription** |  (PT7) |
-| M39 | **Data ingress within same AZ** |  (PT7) |
-| M40 | **Host app, manage OS, don't manage underlying hardware** | Only virtual servers. Physical servers in public cloud = not possible. (PT7) |
+| M39 | **Data ingress within same AZ** | Billing factors: region, account type, access tier, capacity, redundancy, transactions, data egress. (PT7) |
+| M40 | **Host app, manage OS, don't manage underlying hardware** |  (PT7) |
 | M41 | **Fault tolerance** |  (PT7) |
 | M42 | **Intra-region** |  (PT7) |
 | M43 | **Deploy web app, focus only on coding** |  (PT7) |
@@ -6275,10 +6275,10 @@
 | M49 | **Microsoft** |  (PT7) |
 | M50 | **Azure Storage Explorer** |  (PT7) |
 | M51 | **Complementary functionality** |  (PT7) |
-| M52 | **Network virtual appliances** |  (PT7) |
+| M52 | **Network virtual appliances** | Valid: Point-to-Site VPN, Site-to-Site VPN, ExpressRoute. NVAs filter traffic, don't connect to Azure. (PT7) |
 | M53 | **SaaS** |  (PT7) |
 | M54 | **No** | Depends on replication config. LRS = same DC only. GRS = cross-region. (PT7) |
-| M55 | **Security posture** | Private endpoints bypass the public internet entirely. (PT7) |
+| M55 | **Security posture** |  (PT7) |
 | M56 | **Azure Table Storage** |  (PT7) |
 | M57 | **Geographic distribution** |  (PT7) |
 | M58 | **Conditional Access** |  (PT7) |
@@ -6288,7 +6288,7 @@
 | M62 | **Spot Pricing** |  (PT7) |
 | M63 | **Server Assessment + Server Migration** |  (PT7) |
 | M64 | **Azure File Sync** |  (PT7) |
-| M65 | **Improved security by bypassing public internet** |  (PT7) |
+| M65 | **Improved security by bypassing public internet** | Private endpoints bypass the public internet entirely. (PT7) |
 | M66 | **False** |  (PT7) |
 | M67 | **Azure Data Box Gateway** |  (PT7) |
 | M68 | **Total amount of data to transfer** |  (PT7) |
@@ -6296,15 +6296,15 @@
 | M70 | **Cloud provider** |  (PT7) |
 | M71 | **Classify and manage data to meet regulatory requirements** |  (PT7) |
 | M72 | **Both Premium and Standard** |  (PT7) |
-| M73 | **No** |  (PT7) |
-| M74 | **Security** | B2C = customer-facing. B2B = partner collaboration. (PT7) |
+| M73 | **No** | Only virtual servers. Physical servers in public cloud = not possible. (PT7) |
+| M74 | **Security** |  (PT7) |
 | M75 | **Azure Data Lake Storage Gen2** |  (PT7) |
 | M76 | **IaaS** |  (PT7) |
 | M77 | **Discover and share trusted data sources across teams** |  (PT7) |
 | M78 | **Reserved = consistent; consumption = variable** |  (PT7) |
 | M79 | **Data-at-rest encryption** |  (PT7) |
-| M80 | **False** |  (PT7) |
-| M81 | **High availability** | Azure doesn't charge for local/resource disk storage. (PT7) |
+| M80 | **False** | B2C = customer-facing. B2B = partner collaboration. (PT7) |
+| M81 | **High availability** |  (PT7) |
 | M82 | **Elasticity** |  (PT7) |
 | M83 | **Entra B2C** |  (PT7) |
 | M84 | **Yes** |  (PT7) |
@@ -6494,16 +6494,16 @@
 
 | # | Answer | Explanation |
 |---|---|---|
-| N1 | **Yes** | Functions = pay-per-execution. (PT8) |
+| N1 | **Yes** |  (PT8) |
 | N2 | **Azure Data Box** |  (PT8) |
 | N3 | **Entra ID B2C** |  (PT8) |
-| N4 | **Azure Policy** | Subscriptions have resource limits (e.g., max 10 ExpressRoute circuits). (PT8) |
+| N4 | **Azure Policy** |  (PT8) |
 | N5 | **Azure App Service** |  (PT8) |
 | N6 | **VM Scale Sets** |  (PT8) |
-| N7 | **Password + code from Authenticator app** |  (PT8) |
+| N7 | **Password + code from Authenticator app** | Something you know + something you have (or biometric). (PT8) |
 | N8 | **Private cloud** |  (PT8) |
 | N9 | **Classify and protect sensitive data, ensure compliance** |  (PT8) |
-| N10 | **Deploy to different VNet + use NSGs** | SIN is not an MFA factor. MFA = something you know + have + are. (PT8) |
+| N10 | **Deploy to different VNet + use NSGs** |  (PT8) |
 | N11 | **Must rehydrate first** |  (PT8) |
 | N12 | **Controlled access to specified resources while maintaining security** |  (PT8) |
 | N13 | **Operational (OpEx)** |  (PT8) |
@@ -6511,7 +6511,7 @@
 | N15 | **False** |  (PT8) |
 | N16 | **True (False that there's no programmatic access)** |  (PT8) |
 | N17 | **No** | Most RESTRICTIVE takes precedence. (PT8) |
-| N18 | **YAML** | Only 1 account admin per subscription. (PT8) |
+| N18 | **YAML** |  (PT8) |
 | N19 | **Defense in Depth** |  (PT8) |
 | N20 | **Management Groups** |  (PT8) |
 | N21 | **Zero Trust** |  (PT8) |
@@ -6520,17 +6520,17 @@
 | N24 | **Edge** |  (PT8) |
 | N25 | **Customizable sign-up/sign-in experiences** |  (PT8) |
 | N26 | **Entra ID** |  (PT8) |
-| N27 | **No** |  (PT8) |
+| N27 | **No** | Only 1 account admin per subscription. (PT8) |
 | N28 | **Agent-based discovery** |  (PT8) |
 | N29 | **No** |  (PT8) |
 | N30 | **Manage/configure clusters across multiple environments** |  (PT8) |
 | N31 | **Azure ExpressRoute** |  (PT8) |
 | N32 | **Azure Kubernetes (AKS)** |  (PT8) |
 | N33 | **Extend Azure data services to on-prem + multi-cloud** |  (PT8) |
-| N34 | **True** | Something you know + something you have (or biometric). (PT8) |
+| N34 | **True** |  (PT8) |
 | N35 | **GRS** |  (PT8) |
 | N36 | **Yes** |  (PT8) |
-| N37 | **No** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT8) |
+| N37 | **No** |  (PT8) |
 | N38 | **Containers** |  (PT8) |
 | N39 | **No (OpEx)** |  (PT8) |
 | N40 | **Azure Migrate** |  (PT8) |
@@ -6538,18 +6538,18 @@
 | N42 | **Host app + manage OS, don't manage hardware** |  (PT8) |
 | N43 | **Blueprints** |  (PT8) |
 | N44 | **Fault tolerance** |  (PT8) |
-| N45 | **Azure TCO Calculator** |  (PT8) |
+| N45 | **Azure TCO Calculator** | ⚠️ TCO deprecated August 2025. Use Pricing Calculator. (PT8) |
 | N46 | **Deploy web app, focus on coding** |  (PT8) |
-| N47 | **No** |  (PT8) |
+| N47 | **No** | SIN is not an MFA factor. MFA = something you know + have + are. (PT8) |
 | N48 | **Correct** |  (PT8) |
-| N49 | **Package/deploy collection of policy definitions as single entity** | One billing report per subscription. (PT8) |
+| N49 | **Package/deploy collection of policy definitions as single entity** |  (PT8) |
 | N50 | **All: Management + Billing + Scale** |  (PT8) |
 | N51 | **Hybrid** |  (PT8) |
 | N52 | **Provider = infrastructure; customer = apps + data** |  (PT8) |
 | N53 | **Recover from Azure File share using Azure Backup** |  (PT8) |
 | N54 | **Private, Public** |  (PT8) |
 | N55 | **Azure Service Health** |  (PT8) |
-| N56 | **Azure Cosmos DB** | That describes Archive tier, not Cool. (PT8) |
+| N56 | **Azure Cosmos DB** |  (PT8) |
 | N57 | **IaaS = control VMs/OS; PaaS = abstracts infra, focus on app dev** |  (PT8) |
 | N58 | **SaaS** |  (PT8) |
 | N59 | **Network Security Group** |  (PT8) |
@@ -6572,9 +6572,9 @@
 | N76 | **Azure Virtual Network** |  (PT8) |
 | N77 | **VM patching and maintenance** |  (PT8) |
 | N78 | **40 TB** |  (PT8) |
-| N79 | **False** |  (PT8) |
+| N79 | **False** | One billing report per subscription. (PT8) |
 | N80 | **PaaS** |  (PT8) |
-| N81 | **False** |  (PT8) |
+| N81 | **False** | That describes Archive tier, not Cool. (PT8) |
 | N82 | **IaaS** |  (PT8) |
 | N83 | **Scope** | Deallocating (not just shutting down) saves costs. Shutting down alone still incurs charges. (PT8) |
 | N84 | **Shutting down VMs at night** |  (PT8) |

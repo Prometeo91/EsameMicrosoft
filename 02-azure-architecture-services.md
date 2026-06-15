@@ -1,4 +1,4 @@
-# 02 — Describe Azure Architecture and Services (30–35% of the exam)
+# 02 — Describe Azure Architecture and Services (35–40% of the exam)
 
 ---
 

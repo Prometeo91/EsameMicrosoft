@@ -1,4 +1,4 @@
-# 01 — Describe Cloud Computing (15–20% of the exam)
+# 01 — Describe Cloud Computing (25–30% of the exam)
 
 ---
 
