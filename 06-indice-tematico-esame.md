@@ -15,9 +15,9 @@
 
 | Dominio | Peso esame | Domande mappate | Copertura |
 |---------|-----------|-----------------|-----------|
-| 1 — Describe Cloud Concepts | **25–30%** | ~318 | ████████░░ |
-| 2 — Describe Azure Architecture and Services | **35–40%** | ~588 | ██████████ |
-| 3 — Describe Azure Management and Governance | **30–35%** | ~358 | █████████░ |
+| 1 — Describe Cloud Concepts | **25–30%** | ~425 | ████████░░ |
+| 2 — Describe Azure Architecture and Services | **35–40%** | ~788 | ██████████ |
+| 3 — Describe Azure Management and Governance | **30–35%** | ~546 | █████████░ |
 
 > ⚠️ Alcune domande toccano più domini (es. RBAC è sia Architecture che Governance). In quei casi la domanda è elencata nel dominio primario con un rimando al secondario.
 
@@ -38,10 +38,10 @@
 | Cloud models: hybrid | A3, D2, E61, E207, E256, E370, E376, G3, H27, H37, I20, I43, J30, J62, J87, K74, M84, N14, N51 |
 | Cloud models: multi-cloud | E62, E65 |
 | Consumption-based model | A12, E66, E69, F12, F26, H13, H25, J21, J23, K70, L11, L24, M22, M26, N23 |
-| CapEx vs OpEx | E101–E110, E204, E262, F21, F25, F33, I28, K66, L66, M13, M47, N1, N13, N39 |
+| CapEx vs OpEx | E101–E108, E109, E110, E204, E262, F21, F25, F33, I28, K66, L66, M13, M47, N1, N13, N39 |
 | Appropriate use case per cloud model | E56, E382, E383, E384, E387, E388, F10, F11, J15, L80, M59, M86, N54, N65 |
 
-**Conteggio**: ~137 domande
+**Conteggio**: ~149 domande
 
 ### 1.2 — Describe the benefits of using cloud services
 
@@ -59,7 +59,7 @@
 | Sustainability | D6 |
 | Geo-distribution | E372, M57 |
 
-**Conteggio**: ~62 domande
+**Conteggio**: ~58 domande
 
 ### 1.3 — Describe cloud service types
 
@@ -73,7 +73,7 @@
 | Confronto IaaS/PaaS/SaaS | F24, F27, F29, F30, I32, J40, N57 |
 | Serverless (Azure Functions) | D13, E326, E364, F35, F36, F41, F62, I35, I40, I51, I75, J75, K89, L35, L84, N86 |
 
-**Conteggio**: ~119 domande
+**Conteggio**: ~104 domande
 
 ---
 
@@ -94,7 +94,7 @@
 | Management groups | B17, E327, E408, I30, I79, J41, J111, L53, L54, L58, L59, M35, N20 |
 | Azure Resource Manager (ARM) | E5, E8, E10, E11, E13, H18, H39, J79, K15, L86, N66 |
 
-**Conteggio**: ~124 domande
+**Conteggio**: ~126 domande
 
 ### 2.2 — Describe Azure compute and networking services
 
@@ -129,7 +129,7 @@
 | Route Tables / UDR | E44, E116, E280, E287 |
 | Hybrid connectivity overview | E115, E409, E419, F51, F52, M52 |
 
-**Conteggio**: ~248 domande
+**Conteggio**: ~254 domande
 
 ### 2.3 — Describe Azure storage services
 
@@ -148,7 +148,7 @@
 | Data migration: Storage Explorer | J37, M50 |
 | Data migration: Azure Data Box | B10, E1–E4, J78, L85, M9, M23, M60, M67, M68, M79, N2, N24, N74, N78 |
 
-**Conteggio**: ~132 domande
+**Conteggio**: ~130 domande
 
 ### 2.4 — Describe Azure identity, access, and security
 
@@ -169,7 +169,7 @@
 | Identity Protection | E299, F76, F92 |
 | Azure Information Protection / Purview | E209, E213, E298, F57, H19, I29, J35, K75, L76, M46, M71, M77, N9, N61 |
 
-**Conteggio**: ~184 domande
+**Conteggio**: ~164 domande
 
 ---
 
@@ -192,7 +192,7 @@
 | Cost optimization (Advisor) | E210, F109, F113, H28, I80, J113, K11, N84 |
 | Resource group cost (free) | E249, F111 |
 
-**Conteggio**: ~120 domande
+**Conteggio**: ~141 domande
 
 ### 3.2 — Describe features and tools for governance and compliance
 
@@ -221,7 +221,7 @@
 | Azure Arc | C7, D32, E63, E400, G30, H10, J12, J74, K39, L2, L5, L36, M12, N30, N33 |
 | Azure Marketplace | E236, E416 |
 
-**Conteggio**: ~70 domande
+**Conteggio**: ~69 domande
 
 ### 3.4 — Describe monitoring tools in Azure
 
@@ -250,11 +250,11 @@ Queste domande sono utili come cultura generale ma difficilmente compaiono all'e
 | Azure IoT Hub (dettagli) | E161–E179, E312, E361 |
 | Azure AI Services / Machine Learning | D15, E53, E181–E190, E334, E427, F13, F15 |
 | NIST CSF / compliance framework (dettagli) | E191–E200 |
-| VM Reservations (procedure acquisto) | E83–E100 |
-| Azure support plans (dettagli) | E305, E306, E308, E309, F2, F3 |
+| VM Reservations (procedure acquisto) | E83–E98, E99, E100 |
+| Azure support plans (dettagli) | F2, F3, E305, E306, E308, E309 |
 | Disaster Recovery plans (processo) | E15–E20, K12, L87 |
 | Azure DevTest Labs | E311 |
-| Altro (fuori scope) | E64, E218, E234, E255, E268, E274, E277, E296, E297, E307, E314, E315, E335, E404, H30, I76, L38, M63, M75, N28, N40 |
+| Other (fuori scope) | E64, E218, E234, E255, E268, E274, E277, E296, E297, E307, E314, E315, E335, E404, H30, I76, L38, M63, M75, N28, N40 |
 
 ---
 
