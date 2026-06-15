@@ -945,7 +945,7 @@
 | E32 | **b** | Applications can be designed to shift to reading data from the secondary region by configuring RAGRS. |
 | E33 | **b** | The recovery point objective (RPO) in asynchronous geo-replication is the interval between the most recent writes to the primary region and the last write that has been successfully replicated to the secondary region. |
 | E34 | **d** | Geo-zone-redundant designed maximum for storage consistency, (GZRS) durability, is and availability. |
-| E35 | **d** | Azure Files does not support Geo-zoneredundant storage (GZRS). GZRS is a replication option that provides redundancy across availability zones within a region, but Azure Files currently does not offer support for this level of redundancy. |
+| E35 | **⚠️ d** | ⚠️ **Correction**: Azure Files DOES support GZRS in Standard GP v2 accounts. The actual limitation is that **RA-GRS / RA-GZRS** (read-access geo variants) are not available for Azure Files. The original source confuses GZRS with RA-GZRS. |
 | E36 | **b** | Naming conventions help ensure the uniqueness of resource names within a given scope. |
 | E37 | **d** | A resource can only be created in a virtual network that exists in the same region and subscription. |
 | E38 | **d** | Consider factors like network latency, data residency, sovereignty, compliance, and availability zone support when deciding on Azure regions. |
@@ -1312,9 +1312,9 @@
 | E91 | **a** | The correct steps are All Reservations > Add > Virtual machine. |
 | E92 | **c** | The 'Scope' field specifies the reservation's scope, such as a single subscription or shared scope. |
 | E93 | **b** | 'Optimize for' refers to adjusting VM instance size flexibility. |
-| E94 | **c** | Available terms for purchasing are one year, three years, and five years. |
+| E94 | **⚠️ c** | ⚠️ **Correction**: Azure Reservations are available for **1 year or 3 years only** — there is no 5-year term. The correct answer should exclude the 5-year option. |
 | E95 | **a** | The quantity is the number of running VM instances that can get the billing discount. |
-| E96 | **d** | The effective price of zero indicates that the usage gets a reservation discount. |
+| E96 | **d** | ⚠️ Duplicate of E95 — explanation appears mismatched (discusses pricing, not quantity). Cross-reference with E95. |
 | E97 | **b** | Ownership and scope can be changed without causing a new commercial transaction. |
 | E98 | **d** | Splitting and merging reservations help optimize billing and discount distribution. |
 | E99 | **c** | The AdditionalInfo field provides correct information about VM size for reservation purchase. |
